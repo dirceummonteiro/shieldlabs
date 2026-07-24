@@ -55,9 +55,7 @@
   <header class="site-header">
     <div class="container nav">
       <a class="brand" href="../" aria-label="Shield Labs — início">
-        <svg class="brand-mark" viewBox="0 0 64 64" fill="currentColor" fill-rule="evenodd" aria-hidden="true" focusable="false">
-          <path d="M32 5 L55 13 L55 31 C55 44 45 53.5 32 59 C19 53.5 9 44 9 31 L9 13 Z M32 18 L45.5 44 L18.5 44 Z"/>
-        </svg>
+        <img class="brand-mark" src="../assets/img/shield-light-64.png" alt="" width="64" height="64">
         Shield Labs
       </a>
       <nav aria-label="Navegação principal">
@@ -65,9 +63,9 @@
           <span></span><span></span><span></span>
         </button>
         <ul class="nav-links" id="nav-menu">
-          <li><a href="../#como-funciona">Como funciona</a></li>
+          <li><a href="../aegis/">Aegis</a></li>
           <li><a href="../#privacidade">Privacidade</a></li>
-          <li><a href="../#planos">Planos</a></li>
+          <li><a href="../aegis/#planos">Planos</a></li>
           <li><a href="./" aria-current="page">Suporte</a></li>
         </ul>
       </nav>
@@ -81,13 +79,12 @@
           <p class="eyebrow">Suporte</p>
           <h1>Como podemos ajudar?</h1>
           <div class="filete" aria-hidden="true"></div>
-          <p class="lead">Não existe conta nem cadastro no Aegis, então não há nada para recuperar. O caminho é direto: escreva.</p>
+          <p class="lead">Não existe conta nem cadastro no Aegis, então não há senha a recuperar. O caminho é direto: escreva.</p>
         </div>
         <div class="contact">
           <div>
             <p class="eyebrow">Fale com a gente</p>
-            <!-- REVISAR: confirmar que este endereço é monitorado -->
-            <a class="contact-email" href="mailto:contato@shieldlabs.app">contato@shieldlabs.app</a>
+            <a class="contact-email" href="mailto:suporte@shieldlabs.app">suporte@shieldlabs.app</a>
             <p class="mt-1">Quem responde é uma pessoa.</p>
           </div>
           <div>
@@ -107,23 +104,23 @@
         <div class="faq">
           <details>
             <summary>Por que o Aegis pede permissão de VPN?</summary>
-            <p>É essa permissão que permite ao app inspecionar para onde as conexões estão indo e interromper as que vão para sites da lista. O filtro roda inteiramente dentro do seu aparelho: o tráfego não passa por servidores da Shield Labs e nada é descriptografado. Os detalhes estão na <a href="../privacidade/">política de privacidade</a>.</p>
+            <p>É essa autorização que permite ao aplicativo ver para onde uma conexão está indo e barrar as que vão para sites de aposta. Ela não é usada para nada além disso: o seu acesso não passa por servidor nenhum da Shield Labs, e o conteúdo do que você abre não é lido. Os detalhes estão na <a href="../privacidade/">política de privacidade</a>.</p>
           </details>
           <details>
             <summary>O Aegis vê os sites que eu acesso?</summary>
-            <p>Os nomes de domínio são lidos na memória apenas para decidir bloquear ou liberar, e descartados em seguida. Não há registro em log, não há armazenamento e nada é transmitido. Como não existe conta, também não existe um perfil seu em lugar nenhum.</p>
+            <p>O endereço é lido apenas no instante de decidir se abre ou não, e descartado em seguida. Nada é gravado e nada é enviado. Como não existe cadastro, também não existe ficha sua em lugar nenhum.</p>
           </details>
           <details>
             <summary>O bloqueio funciona em todos os casos?</summary>
-            <p>Não, e preferimos dizer isso abertamente. DNS criptografado, acesso por endereço IP direto, domínios espelho recém-criados e a possibilidade de você mesmo desligar a VPN são limites reais. A lista de <a href="../#limites">o que o Aegis não faz</a> está na página inicial.</p>
+            <p>Não, e preferimos dizer isso abertamente. Alguns navegadores procuram os endereços por uma via própria que o Aegis não consegue inspecionar; quem digita o número do servidor no lugar do nome passa por fora; sites criados ontem podem ainda não estar em nenhuma lista; e você mesmo pode desligar a proteção quando quiser. A lista completa está em <a href="../aegis/#limites">o que o Aegis não faz</a>.</p>
           </details>
           <details>
             <summary>Preciso de internet para o bloqueio funcionar?</summary>
-            <p>Não. O filtro funciona offline. A conexão só é usada para baixar atualizações da lista de bloqueio — e esse download não envia nenhuma informação sobre você. Como em qualquer acesso à internet, o provedor que hospeda a lista enxerga o endereço IP e o horário da conexão, e nada além disso. O detalhe está na <a href="../privacidade/#conexoes-de-rede">política de privacidade</a>.</p>
+            <p>Não. A proteção funciona sem conexão. A internet só é usada para baixar as atualizações da lista de endereços bloqueados — e esse download não envia nada sobre você. Como em qualquer acesso à internet, quem hospeda o arquivo enxerga o endereço da sua conexão e a hora, e nada além disso. O detalhe está na <a href="../privacidade/#conexoes-de-rede">política de privacidade</a>.</p>
           </details>
           <details>
             <summary>Esqueci o PIN do guardião. Vocês recuperam?</summary>
-            <p>Não temos como. O PIN fica somente no seu aparelho, guardado como hash, e nunca é transmitido — não existe cópia dele conosco. É a contrapartida direta de não coletarmos nada.</p>
+            <p>Não temos como. O PIN fica somente no seu aparelho e nunca é transmitido — não existe cópia dele conosco. É a contrapartida direta de não guardarmos nada sobre você.</p>
           </details>
           <details>
             <summary>O Aegis já está disponível?</summary>
@@ -140,23 +137,24 @@
       <div class="footer-grid">
         <div class="footer-about">
           <a class="brand" href="../">
-            <svg class="brand-mark" viewBox="0 0 64 64" fill="currentColor" fill-rule="evenodd" aria-hidden="true" focusable="false">
-              <path d="M32 5 L55 13 L55 31 C55 44 45 53.5 32 59 C19 53.5 9 44 9 31 L9 13 Z M32 18 L45.5 44 L18.5 44 Z"/>
-            </svg>
+            <img class="brand-mark" src="../assets/img/shield-light-64.png" alt="" width="64" height="64">
             Shield Labs
           </a>
           <p>Tecnologia brasileira feita para proteger pessoas quando a força de vontade falha.</p>
+          <p class="mt-2">
+            Privacidade e LGPD: <a href="mailto:contato@shieldlabs.app">contato@shieldlabs.app</a><br>
+            Suporte do aplicativo: <a href="mailto:suporte@shieldlabs.app">suporte@shieldlabs.app</a>
+          </p>
         </div>
         <ul class="footer-nav">
-          <li><a href="../#como-funciona">Como funciona</a></li>
+          <li><a href="../aegis/">Aegis</a></li>
           <li><a href="../privacidade/">Privacidade</a></li>
           <li><a href="../termos/">Termos de uso</a></li>
-          <li><a href="./">Suporte</a></li>
+          <li><a href="./" aria-current="page">Suporte</a></li>
         </ul>
       </div>
       <div class="footer-legal">
-        <!-- REVISAR: preencher razão social completa e CNPJ -->
-        <p>[RAZÃO SOCIAL COMPLETA] · CNPJ [CNPJ] · Brasil</p>
+        <p>Shield Labs Desenvolvimento de Software Não Customizável LTDA · CNPJ 68.123.924/0001-19 · Brasil</p>
         <p>© 2026 Shield Labs</p>
       </div>
     </div>

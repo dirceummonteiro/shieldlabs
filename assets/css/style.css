@@ -622,6 +622,46 @@ strong { font-weight: 600; color: var(--silver); }
   font-size: .9375rem;
 }
 
+/* ---------- Running prose ---------- */
+
+.prose p { color: var(--steel); }
+.prose p + p { margin-top: var(--s-2); }
+
+/* ---------- Screenshots ---------- */
+
+.shots {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(var(--s-3), 4vw, var(--s-5));
+  justify-items: center;
+}
+
+@media (max-width: 639px) {
+  .shots { grid-template-columns: 1fr; }
+}
+
+.phone {
+  width: 100%;
+  max-width: 260px;
+  aspect-ratio: 9 / 16;
+  display: grid;
+  place-items: center;
+  background: var(--panel);
+  border: 8px solid var(--steel-dim);
+  border-radius: 36px;
+  overflow: hidden;
+  box-shadow: 0 20px 48px rgba(0, 0, 0, .42);
+}
+
+.phone img { width: 100%; height: 100%; object-fit: cover; }
+
+.phone > span {
+  color: var(--steel);
+  font-size: .8125rem;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+
 /* ---------- Contact ---------- */
 
 .contact {
@@ -691,6 +731,14 @@ strong { font-weight: 600; color: var(--silver); }
 .doc-head { margin-bottom: var(--s-6); }
 .doc-head h1 { font-size: clamp(1.875rem, 1.4rem + 2.2vw, 2.875rem); margin-bottom: var(--s-3); }
 .doc-head .filete { margin-bottom: var(--s-3); }
+
+.doc-org {
+  margin-bottom: var(--s-2);
+  font-size: .9375rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--silver);
+}
 
 .doc-dates {
   display: flex;

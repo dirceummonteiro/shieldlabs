@@ -3,20 +3,312 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Aegis | Shield Labs</title>
-  <meta name="robots" content="noindex">
-  <link rel="canonical" href="https://shieldlabs.app/">
-  <meta http-equiv="refresh" content="0; url=../">
+  <title>Aegis — bloqueio de sites de aposta no Android | Shield Labs</title>
+  <meta name="description" content="O Aegis fecha o acesso a sites de aposta no seu celular: as casas licenciadas no Brasil e, no Premium, mais de 350 mil endereços. Sem conta e sem cadastro.">
+  <link rel="canonical" href="https://shieldlabs.app/aegis/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Shield Labs">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Aegis — bloqueio de sites de aposta no Android">
+  <meta property="og:description" content="Fecha o acesso a sites de aposta no seu celular. Sem conta, sem cadastro, e nada sobre a sua navegação sai do aparelho.">
+  <meta property="og:url" content="https://shieldlabs.app/aegis/">
+  <meta property="og:image" content="https://shieldlabs.app/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Aegis — bloqueio de sites de aposta no Android">
+  <meta name="twitter:description" content="Fecha o acesso a sites de aposta no seu celular. Sem conta, sem cadastro, e nada sobre a sua navegação sai do aparelho.">
+  <meta name="twitter:image" content="https://shieldlabs.app/assets/img/og-image.png">
+
+  <meta name="theme-color" content="#040E1E">
+  <link rel="icon" href="../assets/img/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../assets/img/favicon-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/favicon-180.png">
+  <link rel="manifest" href="../site.webmanifest">
+
+  <link rel="preload" href="../assets/fonts/poppins-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/poppins-500.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/poppins-600.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/poppins-700.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="../assets/js/main.js" defer></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Aegis",
+    "url": "https://shieldlabs.app/aegis/",
+    "image": "https://shieldlabs.app/assets/img/logo-aegis.png",
+    "operatingSystem": "Android",
+    "applicationCategory": "UtilitiesApplication",
+    "inLanguage": "pt-BR",
+    "description": "Aplicativo Android que bloqueia sites de aposta no próprio aparelho, sem conta e sem enviar dados de navegação para fora do celular.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Shield Labs",
+      "legalName": "SHIELD LABS DESENVOLVIMENTO DE SOFTWARE NÃO CUSTOMIZÁVEL LTDA",
+      "url": "https://shieldlabs.app/"
+    }
+  }
+  </script>
+  <noscript>
+    <style>
+      .nav-toggle { display: none !important; }
+      @media (max-width: 819px) {
+        .nav-links {
+          position: static; display: flex; flex-direction: row; flex-wrap: wrap;
+          gap: 0 var(--s-2); padding: 0; background: none; backdrop-filter: none; z-index: auto;
+        }
+        .nav-links a { padding: 6px 0; font-size: .875rem; }
+        .nav { height: auto; flex-wrap: wrap; gap: var(--s-1); padding-block: var(--s-1); }
+        body { padding-top: 116px; }
+      }
+    </style>
+  </noscript>
 </head>
 <body>
-  <main class="error-page">
-    <div>
-      <h1>O Aegis agora fica na página inicial</h1>
-      <div class="filete" aria-hidden="true"></div>
-      <p>Esta página foi movida. Se o navegador não redirecionar sozinho, use o link abaixo.</p>
-      <a class="btn btn-primary" href="../">Ir para a página inicial</a>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="../" aria-label="Shield Labs — início">
+        <img class="brand-mark" src="../assets/img/shield-light-64.png" alt="" width="64" height="64">
+        Shield Labs
+      </a>
+      <nav aria-label="Navegação principal">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Abrir menu">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" id="nav-menu">
+          <li><a href="./" aria-current="page">Aegis</a></li>
+          <li><a href="../#privacidade">Privacidade</a></li>
+          <li><a href="#planos">Planos</a></li>
+          <li><a href="../suporte/">Suporte</a></li>
+        </ul>
+      </nav>
     </div>
+  </header>
+
+  <main id="conteudo" tabindex="-1">
+
+    <!-- Hero do produto: aqui, e só aqui, o ícone do app representa a coisa -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div>
+            <p class="eyebrow">Um aplicativo da Shield Labs</p>
+            <h1>Aegis</h1>
+            <p class="lead">Fecha o acesso a sites de aposta no seu celular Android — e continua fechado quando você mais quiser abrir.</p>
+            <div class="hero-actions">
+              <!-- REVISAR: trocar por href da Google Play e remover aria-disabled quando o app for publicado -->
+              <a class="btn btn-primary" href="#" aria-disabled="true">Em breve na Google Play</a>
+              <a class="btn btn-secondary" href="#cobertura">O que ele bloqueia</a>
+            </div>
+          </div>
+          <div class="hero-art">
+            <img src="../assets/img/logo-aegis.png" alt="Ícone do aplicativo Aegis: um escudo azul com um anel de meandro grego e um triângulo ao centro" width="512" height="512" fetchpriority="high">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Por que existe -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Por que ele existe</p>
+          <h2>O intervalo entre o impulso e o toque na tela</h2>
+        </div>
+        <div class="prose">
+          <p>Entre querer apostar e apostar existe um intervalo muito curto. Não é falta de decisão: a decisão já foi tomada, muitas vezes. É que, naquele intervalo, o acesso está a dois toques de distância e ninguém está olhando.</p>
+          <p>O Aegis trabalha nesse intervalo. Ele não conversa, não avalia e não julga — só faz o site não abrir. Quem já tentou parar sabe que, às vezes, é exatamente disso que se precisa.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cobertura -->
+    <section class="section" id="cobertura">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Cobertura</p>
+          <h2>O que entra no bloqueio</h2>
+          <p class="lead">São dois problemas diferentes, e o Aegis trata cada um de um jeito.</p>
+        </div>
+        <ul class="limits">
+          <li data-reveal>
+            <h3>As casas legalizadas</h3>
+            <!-- REVISAR: conferir a lista embarcada no app contra a relacao atual da SPA/MF antes de publicar -->
+            <p>São as que você vê anunciando na televisão, na camisa dos times e no intervalo dos jogos. Desde a Lei 14.790/2023, elas precisam de autorização federal e de um endereço terminado em <strong>.bet.br</strong>. Eram 187 em julho de 2026, e a lista acompanha as novas autorizações.</p>
+          </li>
+          <li data-reveal>
+            <h3>Todo o resto</h3>
+            <!-- REVISAR: confirmar a contagem atual antes de publicar -->
+            <p>Cópias, espelhos, plataformas de fora do país e endereços criados justamente para escapar de bloqueios. São milhares de novos por semana. O plano Premium alcança mais de 350 mil desses endereços, e a lista é atualizada continuamente.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Planos -->
+    <section class="section section-alt" id="planos">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Planos</p>
+          <h2>O que cada plano alcança</h2>
+          <p class="lead">A diferença entre eles é de alcance — quantos endereços entram no bloqueio —, não de força.</p>
+        </div>
+        <div class="plans">
+          <div class="plan plan-featured" data-reveal>
+            <div class="plan-name">
+              <h3>Básico</h3>
+            </div>
+            <p>Fecha as casas de aposta que operam legalmente no Brasil.</p>
+            <!-- REVISAR: conferir a lista embarcada no app contra a relacao atual da SPA/MF antes de publicar -->
+            <ul>
+              <li>Todas as casas licenciadas para operar no Brasil — 187 em julho de 2026, e a lista acompanha as novas</li>
+              <li>Não pede cadastro nem e-mail: você instala e liga</li>
+              <li>Continua bloqueando mesmo sem internet</li>
+            </ul>
+          </div>
+          <div class="plan" data-reveal>
+            <div class="plan-name">
+              <h3>Premium</h3>
+            </div>
+            <p>Alcança também os sites que aparecem toda semana para substituir os bloqueados.</p>
+            <!-- REVISAR: confirmar a contagem atual antes de publicar -->
+            <ul>
+              <li>Mais de 350 mil endereços, além das casas legalizadas</li>
+              <li>A lista é atualizada continuamente, conforme novos sites aparecem</li>
+              <li>Tudo o que está no Básico</li>
+            </ul>
+          </div>
+          <div class="plan plan-soon" data-reveal>
+            <div class="plan-name">
+              <h3>Guardião</h3>
+              <span class="tag">Em breve</span>
+            </div>
+            <p>Coloca alguém em quem você confia entre o impulso e a ação.</p>
+            <ul>
+              <li>Essa pessoa aprova ou recusa, do celular dela, cada tentativa de desligar a proteção</li>
+              <li>Ela vê apenas se a proteção está ligada e os pedidos que você faz</li>
+              <li>Ela nunca vê o que você acessa</li>
+            </ul>
+          </div>
+        </div>
+        <p class="plans-note">Os planos ainda não foram anunciados. Se quiser saber quando o Aegis chegar à Google Play, escreva para <a href="mailto:suporte@shieldlabs.app?subject=Avisar%20no%20lan%C3%A7amento%20do%20Aegis">suporte@shieldlabs.app</a>.</p>
+      </div>
+    </section>
+
+    <!-- Capturas -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Na tela</p>
+          <h2>O Aegis funcionando</h2>
+        </div>
+        <!-- REVISAR: inserir capturas reais do app -->
+        <div class="shots">
+          <div class="phone" data-reveal><span>Em breve</span></div>
+          <div class="phone" data-reveal><span>Em breve</span></div>
+          <div class="phone" data-reveal><span>Em breve</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Privacidade -->
+    <section class="section">
+      <div class="container">
+        <div class="privacy" data-reveal>
+          <div class="privacy-grid">
+            <div>
+              <p class="eyebrow">Privacidade</p>
+              <h2>Nada sobre a sua navegação sai do celular</h2>
+              <div class="filete" aria-hidden="true"></div>
+              <p>O Aegis pede permissão de VPN, mas não é uma VPN de navegação: ele não esconde o seu IP, não muda o seu país e não faz o seu acesso passar por servidor nenhum da Shield Labs. A checagem acontece dentro do aparelho.</p>
+              <p class="mt-3"><a class="arrow-link" href="../privacidade/">Ler a política de privacidade completa</a></p>
+            </div>
+            <div>
+              <ul class="claims">
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>
+                  <span><strong>Não existe cadastro</strong>Sem login, sem e-mail, sem telefone.</span>
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>
+                  <span><strong>Nada fica registrado</strong>Nenhum site visitado, nenhum histórico, sem rastreadores.</span>
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>
+                  <span><strong>Funciona offline</strong>A proteção não depende de conexão com a gente.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Limites -->
+    <section class="section section-alt" id="limites">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Limites</p>
+          <h2>O que o Aegis não faz</h2>
+          <p class="lead">Nenhum bloqueio é completo, e preferimos que você saiba disso antes de instalar.</p>
+        </div>
+        <ul class="limits">
+          <li data-reveal>
+            <h3>Navegadores com caminho próprio</h3>
+            <p>Alguns navegadores e aplicativos procuram os endereços por uma via própria, que o Aegis não consegue inspecionar. Nesses casos, o site pode abrir.</p>
+          </li>
+          <li data-reveal>
+            <h3>Acesso pelo número do site</h3>
+            <p>Todo site tem, além do nome, um número que identifica o servidor. Quem digita esse número direto passa por fora do bloqueio.</p>
+          </li>
+          <li data-reveal>
+            <h3>Você pode desligar</h3>
+            <p>O celular é seu, e o Android sempre permite desativar a proteção. O Aegis não impede isso — e não tentaria.</p>
+          </li>
+          <li data-reveal>
+            <h3>Sites criados ontem</h3>
+            <p>Sites de aposta trocam de endereço o tempo todo. Um endereço recém-criado pode levar algum tempo até entrar em qualquer lista de bloqueio.</p>
+          </li>
+        </ul>
+        <p class="plans-note">O Aegis aumenta o atrito no momento em que ele pesa. Não substitui uma decisão sua — dá tempo para ela.</p>
+      </div>
+    </section>
+
   </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <a class="brand" href="../">
+            <img class="brand-mark" src="../assets/img/shield-light-64.png" alt="" width="64" height="64" loading="lazy">
+            Shield Labs
+          </a>
+          <p>Tecnologia brasileira feita para proteger pessoas quando a força de vontade falha.</p>
+          <p class="mt-2">
+            Privacidade e LGPD: <a href="mailto:contato@shieldlabs.app">contato@shieldlabs.app</a><br>
+            Suporte do aplicativo: <a href="mailto:suporte@shieldlabs.app">suporte@shieldlabs.app</a>
+          </p>
+        </div>
+        <ul class="footer-nav">
+          <li><a href="./">Aegis</a></li>
+          <li><a href="../privacidade/">Privacidade</a></li>
+          <li><a href="../termos/">Termos de uso</a></li>
+          <li><a href="../suporte/">Suporte</a></li>
+        </ul>
+      </div>
+      <div class="footer-legal">
+        <p>SHIELD LABS DESENVOLVIMENTO DE SOFTWARE NÃO CUSTOMIZÁVEL LTDA · CNPJ 68.123.924/0001-19 · Brasil</p>
+        <p>© 2026 Shield Labs</p>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

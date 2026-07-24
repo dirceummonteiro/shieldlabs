@@ -3,22 +3,22 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Política de Privacidade | Shield Labs</title>
-  <meta name="description" content="O que o Aegis coleta, o que não coleta e por quê. Nada sobre a sua navegação sai do aparelho — com a única exceção descrita nesta página.">
+  <title>Política de Privacidade — Aegis | Shield Labs</title>
+  <meta name="description" content="O que o Aegis coleta, o que não coleta e por quê. Nada sobre a sua navegação sai do aparelho — com a única ressalva descrita nesta página.">
   <link rel="canonical" href="https://shieldlabs.app/privacidade/">
 
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Shield Labs">
   <meta property="og:locale" content="pt_BR">
   <meta property="og:title" content="Política de Privacidade — Aegis">
-  <meta property="og:description" content="O que o Aegis coleta, o que não coleta e por quê. Nada sobre a sua navegação sai do aparelho — com a única exceção descrita nesta página.">
+  <meta property="og:description" content="O que o Aegis coleta, o que não coleta e por quê. Nada sobre a sua navegação sai do aparelho — com a única ressalva descrita nesta página.">
   <meta property="og:url" content="https://shieldlabs.app/privacidade/">
   <meta property="og:image" content="https://shieldlabs.app/assets/img/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Política de Privacidade — Aegis">
-  <meta name="twitter:description" content="O que o Aegis coleta, o que não coleta e por quê. Nada sobre a sua navegação sai do aparelho — com a única exceção descrita nesta página.">
+  <meta name="twitter:description" content="O que o Aegis coleta, o que não coleta e por quê. Nada sobre a sua navegação sai do aparelho — com a única ressalva descrita nesta página.">
   <meta name="twitter:image" content="https://shieldlabs.app/assets/img/og-image.png">
 
   <meta name="theme-color" content="#040E1E">
@@ -55,9 +55,7 @@
   <header class="site-header">
     <div class="container nav">
       <a class="brand" href="../" aria-label="Shield Labs — início">
-        <svg class="brand-mark" viewBox="0 0 64 64" fill="currentColor" fill-rule="evenodd" aria-hidden="true" focusable="false">
-          <path d="M32 5 L55 13 L55 31 C55 44 45 53.5 32 59 C19 53.5 9 44 9 31 L9 13 Z M32 18 L45.5 44 L18.5 44 Z"/>
-        </svg>
+        <img class="brand-mark" src="../assets/img/shield-light-64.png" alt="" width="64" height="64">
         Shield Labs
       </a>
       <nav aria-label="Navegação principal">
@@ -65,9 +63,9 @@
           <span></span><span></span><span></span>
         </button>
         <ul class="nav-links" id="nav-menu">
-          <li><a href="../#como-funciona">Como funciona</a></li>
-          <li><a href="../#privacidade">Privacidade</a></li>
-          <li><a href="../#planos">Planos</a></li>
+          <li><a href="../aegis/">Aegis</a></li>
+          <li><a href="./" aria-current="page">Privacidade</a></li>
+          <li><a href="../aegis/#planos">Planos</a></li>
           <li><a href="../suporte/">Suporte</a></li>
         </ul>
       </nav>
@@ -81,8 +79,9 @@
           <p class="eyebrow">Aegis</p>
           <h1>Política de Privacidade</h1>
           <div class="filete" aria-hidden="true"></div>
+          <p class="doc-org">Shield Labs Desenvolvimento de Software Não Customizável LTDA<br>CNPJ 68.123.924/0001-19</p>
           <div class="doc-dates">
-            <span>Em vigor desde 24 de julho de 2026</span>
+            <span>Vigente desde: 24 de julho de 2026</span>
             <span>Última atualização: 24 de julho de 2026</span>
           </div>
         </div>
@@ -90,370 +89,274 @@
         <nav class="toc" aria-labelledby="toc-titulo">
           <h2 id="toc-titulo">Nesta página</h2>
           <ol>
-            <li><a href="#identificacao">Identificação</a></li>
-            <li><a href="#resumo">Resumo em uma tela</a></li>
+            <li><a href="#quem-somos">Quem somos</a></li>
             <li><a href="#o-que-faz">O que o Aegis faz</a></li>
-            <li><a href="#nao-coletado">O que não é coletado</a></li>
-            <li><a href="#processamento-local">O que é processado localmente, no aparelho</a></li>
+            <li><a href="#nao-coletamos">O que NÃO coletamos</a></li>
+            <li><a href="#processamento-local">O que é processado dentro do seu aparelho</a></li>
             <li><a href="#conexoes-de-rede">Conexões de rede que o aplicativo faz</a></li>
             <li><a href="#terceiros">Terceiros</a></li>
-            <li><a href="#permissoes">Permissões e por que cada uma existe</a></li>
+            <li><a href="#permissoes">Permissões que o aplicativo solicita</a></li>
             <li><a href="#assinaturas">Assinaturas</a></li>
             <li><a href="#guardiao">Guardião</a></li>
-            <li><a href="#criancas">Crianças e adolescentes</a></li>
-            <li><a href="#retencao-exclusao">Retenção e exclusão</a></li>
-            <li><a href="#direitos">Direitos do titular (LGPD)</a></li>
+            <li><a href="#publico">Público do aplicativo</a></li>
+            <li><a href="#retencao-exclusao">Retenção e exclusão de dados</a></li>
+            <li><a href="#direitos">Seus direitos (LGPD)</a></li>
+            <li><a href="#seguranca">Segurança</a></li>
             <li><a href="#alteracoes">Alterações nesta política</a></li>
             <li><a href="#contato">Contato</a></li>
           </ol>
         </nav>
 
-        <section class="doc-section" id="identificacao">
-          <h2>1. Identificação</h2>
-
-          <p>Esta Política de Privacidade descreve, de forma completa e verificável, como o aplicativo <strong>Aegis</strong>, para Android, trata informações. O Aegis é desenvolvido e mantido pela Shield Labs.</p>
-
-          <!-- REVISAR -->
-          <p><strong>Controladora dos dados:</strong> [RAZÃO SOCIAL COMPLETA], inscrita no CNPJ sob o nº [CNPJ], que atua comercialmente sob o nome Shield Labs.</p>
-
-          <p><strong>Site oficial:</strong> <a href="https://shieldlabs.app" rel="noopener">https://shieldlabs.app</a></p>
-
-          <!-- REVISAR -->
-          <p><strong>Canal de contato:</strong> <a href="mailto:contato@shieldlabs.app">contato@shieldlabs.app</a>. É o mesmo endereço para dúvidas sobre esta política, para o exercício dos direitos previstos na Lei Geral de Proteção de Dados (Lei nº 13.709/2018) e para contato com o encarregado pelo tratamento de dados pessoais, na forma do art. 41 da LGPD.</p>
-
-          <ul class="doc-list">
-            <li><strong>Data de vigência:</strong> 24 de julho de 2026.</li>
-            <li><strong>Data da última atualização:</strong> 24 de julho de 2026.</li>
-            <li><strong>Abrangência:</strong> esta política se aplica ao aplicativo Aegis para Android, em todas as versões distribuídas pela Google Play.</li>
-            <li><strong>Idioma de referência:</strong> português do Brasil.</li>
-          </ul>
-
-          <p>Escrevemos este documento para ser lido por qualquer pessoa, não apenas por advogados. Onde havia escolha entre uma frase mais curta e uma frase mais exata, escolhemos a mais exata.</p>
-        </section>
-
         <section class="doc-section" id="resumo">
-          <h2>2. Resumo em uma tela</h2>
+          <h2>Resumo em uma tela</h2>
 
-          <p>Se você ler apenas esta seção, não vai sair daqui com uma ideia errada. Tudo o que está no resumo abaixo é detalhado no restante do documento, e nada do que vem depois contradiz o que está aqui.</p>
+          <p>O Aegis bloqueia sites de aposta no seu próprio aparelho Android.</p>
 
           <div class="doc-callout">
-            <p>O Aegis bloqueia sites de aposta dentro do seu próprio aparelho, por meio de um filtro de VPN local. <strong>Não existe conta, não existe login e o bloqueio funciona sem internet.</strong> Nenhuma informação sobre a sua navegação — os sites que você acessa, os que foram bloqueados, as suas consultas de DNS — sai do aparelho para a Shield Labs. Não há analytics, telemetria nem SDKs de anúncios. As únicas conexões que o aplicativo faz com a internet são downloads de listas de sites bloqueados: é só download, e nada sobre você é enviado. Como acontece em qualquer acesso à internet, os provedores que hospedam essas listas enxergam o endereço IP da conexão e o horário. Essa é a exceção, e ela está descrita com todas as letras na seção 6.</p>
+            <ul class="doc-list">
+              <li><strong>Nada sobre a sua navegação sai do seu aparelho.</strong> Nenhum site visitado, nenhuma consulta de DNS, nenhum histórico.</li>
+              <li><strong>Não existe conta.</strong> Você não se cadastra, não faz login, não informa e-mail nem telefone.</li>
+              <li><strong>O aplicativo funciona offline.</strong> A proteção não depende de internet nem de servidores nossos.</li>
+              <li><strong>Não vendemos nem compartilhamos dados seus</strong> — e, na prática, não temos dados seus para vender.</li>
+              <li>A única conexão que o aplicativo faz é <strong>baixar</strong> a lista de sites bloqueados. Ele nunca envia nada sobre você.</li>
+            </ul>
           </div>
 
-          <p>Duas observações honestas, ditas aqui e não escondidas no fim da página. A primeira: nenhum filtro consegue cobrir todos os endereços da internet, e o Aegis não é exceção — as limitações reais estão na seção 3. A segunda: o aplicativo pode ser desligado por você a qualquer momento. Isso é intencional. O Aegis existe para tornar o impulso mais trabalhoso de executar do que a decisão que você já tomou, não para tirar de você o controle sobre o próprio aparelho.</p>
+          <p>Se você parar de ler aqui, o resumo acima é verdadeiro. O restante do documento detalha o funcionamento e as poucas exceções — que existem e estão explicadas com honestidade.</p>
+        </section>
+
+        <section class="doc-section" id="quem-somos">
+          <h2>1. Quem somos</h2>
+
+          <p>A Shield Labs Desenvolvimento de Software Não Customizável LTDA, inscrita no CNPJ 68.123.924/0001-19, é a desenvolvedora do Aegis e a controladora dos poucos dados descritos nesta política.</p>
+
+          <p><strong>Contato para assuntos de privacidade e proteção de dados:</strong> <a href="mailto:contato@shieldlabs.app">contato@shieldlabs.app</a><br>
+            <strong>Suporte sobre o aplicativo:</strong> <a href="mailto:suporte@shieldlabs.app">suporte@shieldlabs.app</a></p>
         </section>
 
         <section class="doc-section" id="o-que-faz">
-          <h2>3. O que o Aegis faz</h2>
+          <h2>2. O que o Aegis faz</h2>
 
-          <p>O Aegis é um aplicativo que bloqueia o acesso a sites de aposta online no aparelho em que está instalado. Ele foi feito para quem decidiu parar de apostar e quer uma barreira concreta entre o impulso e o site.</p>
+          <p>O Aegis é um aplicativo de redução de danos: ele ajuda quem quer parar de apostar a bloquear o acesso a sites de aposta no próprio celular.</p>
 
-          <p>O bloqueio acontece por meio de um <strong>filtro de VPN local</strong>. O Android oferece aos aplicativos uma interface de rede no próprio aparelho, e é ela que o Aegis utiliza. Em termos práticos, o aplicativo se coloca entre o navegador e a rede, olha para o nome do domínio que está sendo solicitado, compara esse nome com a lista de bloqueio e decide: permitir ou bloquear. Essa decisão acontece inteiramente dentro do seu aparelho.</p>
-
-          <p>É igualmente importante dizer o que o Aegis <strong>não</strong> é:</p>
+          <p>Para isso, o aplicativo cria uma <strong>VPN local</strong>. Isso merece uma explicação, porque a palavra "VPN" costuma sugerir outra coisa:</p>
 
           <ul class="doc-list">
-            <li><strong>Não é um proxy.</strong> A palavra "VPN" costuma sugerir que o tráfego passa por um servidor de outra empresa. Não é o caso aqui. A VPN do Aegis não tem servidor do outro lado.</li>
-            <li><strong>Não roteia o seu tráfego por servidores da Shield Labs.</strong> A Shield Labs não opera nenhum servidor por onde passe a sua navegação. Sua conexão continua indo direto do seu aparelho para os sites que você acessa.</li>
-            <li><strong>Não descriptografa nada.</strong> Não há interceptação de TLS, não há inspeção de conteúdo e o aplicativo não pede para instalar nenhum certificado no seu aparelho. O Aegis não consegue ler o conteúdo das páginas que você visita, nem as suas senhas, nem as suas mensagens — não porque prometemos não olhar, mas porque a arquitetura do aplicativo não tem essa capacidade.</li>
-            <li><strong>Não exige conta nem cadastro.</strong> Não pedimos nome, e-mail, telefone ou CPF para o aplicativo funcionar.</li>
-            <li><strong>Não precisa de internet para bloquear.</strong> A lista já baixada fica no aparelho e o filtro continua funcionando offline.</li>
+            <li><strong>O Aegis não é uma VPN de navegação.</strong> Ele não esconde seu IP, não muda seu país, não faz você parecer estar em outro lugar.</li>
+            <li><strong>Seu tráfego não passa por servidores da Shield Labs.</strong> Não temos servidores por onde ele possa passar. O filtro roda inteiramente dentro do seu aparelho.</li>
+            <li><strong>O Aegis não descriptografa nada.</strong> Não fazemos interceptação de conexões seguras (TLS/HTTPS), não instalamos certificados no seu aparelho e não temos como ler o conteúdo do que você acessa.</li>
           </ul>
 
-          <p><strong>Limitações reais.</strong> Preferimos que você saiba disto antes de instalar, e não depois: (a) conexões que usam DNS criptografado por caminhos que o filtro não alcança podem escapar do bloqueio; (b) o acesso feito diretamente por endereço IP, sem nome de domínio, pode não ser interceptado; (c) o próprio usuário pode desligar a VPN nas configurações do Android; (d) sites de aposta criam domínios espelho com frequência, e um domínio novo só é bloqueado depois de entrar na lista. Por isso não afirmamos, em lugar nenhum, que o Aegis bloqueia todos os sites de aposta, nem que a proteção é infalível ou garantida. Ele reduz o acesso de forma significativa; não elimina todas as rotas possíveis.</p>
+          <p>A permissão de VPN do Android é usada exclusivamente como mecanismo técnico para filtrar localmente, no aparelho, os endereços que o aplicativo bloqueia.</p>
         </section>
 
-        <section class="doc-section" id="nao-coletado">
-          <h2>4. O que não é coletado</h2>
+        <section class="doc-section" id="nao-coletamos">
+          <h2>3. O que NÃO coletamos</h2>
 
-          <p>Esta é a seção mais importante do documento, e por isso ela é específica em vez de genérica. Uma promessa vaga de privacidade não vale nada; uma lista nominal, sim. <strong>O Aegis não coleta, não registra em log, não armazena e não transmite nenhum dos itens abaixo:</strong></p>
+          <p>Não coletamos, não armazenamos, não transmitimos e não temos acesso a:</p>
 
           <ul class="doc-list">
-            <li>Consultas de DNS.</li>
-            <li>Nomes de domínio ou endereços que você acessou.</li>
-            <li>Nomes de domínio ou endereços que foram bloqueados.</li>
-            <li>Histórico de navegação, de qualquer navegador ou aplicativo.</li>
-            <li>Conteúdo das páginas visitadas, formulários preenchidos, senhas digitadas.</li>
-            <li>Endereço IP do usuário — a Shield Labs não recebe, não registra e não armazena o seu IP (leia a seção 6 sobre o que o provedor de hospedagem da lista enxerga).</li>
-            <li>Localização, precisa ou aproximada, por GPS, por rede ou por qualquer outro meio.</li>
-            <li>Contatos, agenda, calendário, registro de chamadas ou mensagens SMS.</li>
-            <li>Fotos, vídeos, arquivos, áudio, microfone ou câmera.</li>
-            <li>Identificadores de publicidade, como o Advertising ID do Google.</li>
-            <li>Identificadores de dispositivo usados para rastreamento, como IMEI, Android ID, número de série ou impressão digital do aparelho.</li>
-            <li>Lista de aplicativos instalados no aparelho.</li>
-            <li>Nome, e-mail, telefone, CPF, data de nascimento ou qualquer dado cadastral — o aplicativo não tem tela de cadastro.</li>
-            <li>Dados de saúde, condição clínica, tratamento, ou qualquer informação sobre a sua relação pessoal com o jogo.</li>
-            <li>Dados de cartão de crédito, conta bancária ou meio de pagamento.</li>
-            <li>Estatísticas de uso enviadas a servidores: quantas vezes você abriu o aplicativo, quanto tempo ficou nele, em quais telas tocou.</li>
-            <li>Relatórios de falha (crash reports) enviados a servidores da Shield Labs ou a serviços de terceiros.</li>
+            <li>Consultas de DNS</li>
+            <li>Sites visitados ou bloqueados</li>
+            <li>Histórico de navegação</li>
+            <li>Seu endereço IP (com uma ressalva descrita no item 5, sobre o provedor de armazenamento)</li>
+            <li>Sua localização</li>
+            <li>Seus contatos</li>
+            <li>Suas fotos, arquivos ou mensagens</li>
+            <li>Identificadores de publicidade</li>
+            <li>Identificadores do aparelho para fins de rastreamento</li>
           </ul>
 
-          <p>Não há, no aplicativo, nenhuma ferramenta de <strong>analytics</strong>, nenhuma <strong>telemetria</strong> e nenhum <strong>SDK de anúncios</strong>. Não vendemos, não alugamos e não compartilhamos dados pessoais com anunciantes, corretores de dados (<em>data brokers</em>) ou terceiros para fins de marketing. Não construímos perfis de usuário, porque não temos com o que construí-los.</p>
-
-          <!-- REVISAR -->
-          <p><strong>Correspondência com a Google Play.</strong> A declaração de Segurança de Dados publicada na Google Play deve ser mantida coerente, ponto a ponto, com esta seção. A visibilidade do endereço IP pelo provedor de hospedagem, descrita na seção 6, decorre do funcionamento técnico de qualquer requisição na internet, não constitui coleta de dados pela Shield Labs e não altera essa declaração.</p>
+          <p>O aplicativo <strong>não possui</strong> ferramentas de análise de uso (analytics), telemetria, rastreadores ou kits de publicidade de terceiros.</p>
         </section>
 
         <section class="doc-section" id="processamento-local">
-          <h2>5. O que é processado localmente, no aparelho</h2>
+          <h2>4. O que é processado dentro do seu aparelho</h2>
 
-          <p>Algumas informações precisam ser processadas para que o bloqueio exista. Todas elas ficam no aparelho, e a Shield Labs não tem acesso a nenhuma delas em nenhum momento.</p>
+          <p>Para decidir se um endereço deve ser bloqueado ou liberado, o aplicativo precisa ler o nome do domínio solicitado. Isso acontece <strong>apenas na memória do aparelho</strong>, no instante da decisão, e o dado é descartado em seguida.</p>
 
-          <p><strong>Nomes de domínio, lidos de forma transitória.</strong> Para decidir se bloqueia ou permite uma conexão, o aplicativo precisa ler o nome do domínio solicitado. Esse nome é mantido apenas na memória do aparelho, pelo tempo necessário para a comparação com a lista, e é descartado imediatamente depois. Ele <strong>nunca é gravado em log, nunca é armazenado em disco e nunca é transmitido</strong> — nem para a Shield Labs, nem para terceiros. Não existe, em lugar nenhum, um histórico dos sites que você tentou acessar. Nem no aparelho, nem fora dele.</p>
-
-          <p><strong>Configurações locais que permanecem no aparelho.</strong> São poucas, e esta é a lista completa:</p>
+          <p>Esse nome de domínio:</p>
 
           <ul class="doc-list">
-            <li><strong>Proteção ligada ou desligada:</strong> o estado atual do filtro.</li>
-            <li><strong>Estado de compromisso:</strong> a configuração que registra o compromisso assumido por você dentro do aplicativo.</li>
-            <li><strong>Hash do PIN do guardião:</strong> uma representação irreversível do PIN, nunca o PIN em si. Veja a seção 10.</li>
+            <li>não é gravado em arquivo</li>
+            <li>não é registrado em log</li>
+            <li>não é enviado a lugar nenhum</li>
+            <li>não fica disponível para nós em nenhuma circunstância</li>
           </ul>
 
-          <p>Essas configurações ficam no armazenamento privado do aplicativo, área que o Android reserva a cada app e que outros aplicativos não podem ler. Elas não são sincronizadas com nenhuma nuvem da Shield Labs, porque não há nuvem da Shield Labs para sincronizar.</p>
+          <p>Também ficam guardadas <strong>no seu aparelho</strong>, e somente nele, as suas configurações: se a proteção está ligada, o estado do Modo Compromisso e, caso você use o Guardião local, a verificação do PIN (armazenada de forma cifrada, nunca o PIN em si).</p>
 
-          <p>Do ponto de vista da LGPD: informações que permanecem exclusivamente no seu aparelho, sob o seu controle, e às quais a Shield Labs não tem qualquer acesso, não são objeto de tratamento por nós.</p>
+          <p>Se você usar o backup do Android, algumas dessas configurações podem ser incluídas no backup da sua conta Google, conforme as regras do próprio Android. Isso é um recurso do sistema operacional, não um envio de dados para a Shield Labs.</p>
         </section>
 
         <section class="doc-section" id="conexoes-de-rede">
-          <h2>6. Conexões de rede que o aplicativo faz</h2>
+          <h2>5. Conexões de rede que o aplicativo faz</h2>
 
-          <p>Esta seção existe porque uma política que dissesse apenas "nada sai do seu aparelho" seria mais bonita e menos verdadeira. O Aegis faz, sim, conexões com a internet. São poucas, todas na mesma direção, e estão descritas abaixo sem omissão.</p>
+          <p>Esta é a parte em que preferimos ser específicos, em vez de dizer apenas "não coletamos nada".</p>
 
-          <p><strong>1. Download da lista de bloqueio.</strong> O aplicativo baixa, por HTTPS, o arquivo com a lista de domínios bloqueados, hospedado em um serviço de armazenamento público (Cloudflare R2). A operação é <strong>somente de leitura</strong>: o aplicativo pede o arquivo e recebe o arquivo. Ele não envia nenhum dado sobre você, sobre o seu aparelho, sobre a sua navegação ou sobre as suas configurações. <!-- REVISAR: confirmar que a URL da lista nao carrega identificador nem parametro por aparelho -->O endereço solicitado é fixo e idêntico para todos os usuários — não carrega identificador, não carrega parâmetro, não distingue um aparelho de outro.</p>
+          <p>O aplicativo faz <strong>downloads</strong> da lista de sites bloqueados:</p>
 
-          <!-- REVISAR -->
-          <p>Esse download acontece periodicamente, para que a lista acompanhe o surgimento de novos domínios.</p>
+          <ul class="doc-list">
+            <li>A lista principal é baixada de um serviço público de armazenamento (Cloudflare R2).</li>
+            <li>Listas complementares, usadas na cobertura estendida, vêm de fontes públicas de bloqueio mantidas por terceiros.</li>
+          </ul>
 
-          <!-- REVISAR -->
-          <p><strong>2. Fontes públicas adicionais de listas de bloqueio.</strong> Para a cobertura estendida, o aplicativo também baixa listas mantidas publicamente por terceiros. A natureza da conexão é exatamente a mesma: apenas download, sem envio de qualquer dado sobre você.</p>
-
-          <p><strong>3. Não há uma terceira.</strong> O Aegis não envia eventos, não avisa que foi instalado, não manda sinais periódicos de funcionamento, não reporta erros e não sincroniza nada. Nada é enviado. Nunca.</p>
+          <p>Em todos os casos, <strong>o aplicativo apenas baixa</strong>. Ele não envia nenhuma informação sobre você, sobre o seu aparelho ou sobre a sua navegação.</p>
 
           <div class="doc-callout">
-            <p><strong>A exceção honesta.</strong> Toda requisição na internet — de qualquer aplicativo, de qualquer navegador — revela ao servidor que responde o endereço IP de onde veio a conexão e o horário em que ela ocorreu. Isso é como a internet funciona, e o download da lista de bloqueio não escapa disso. Portanto: o provedor que hospeda a lista <strong>enxerga o endereço IP do seu aparelho e o horário da requisição</strong>. O que ele não enxerga: quais sites você visitou, quais foram bloqueados, se a proteção está ligada, quem você é. O arquivo baixado é o mesmo para todas as pessoas, então o download não revela nada sobre o seu uso. E como o Aegis não tem conta nem identificador, a Shield Labs não tem como associar esse endereço IP a uma pessoa — e não o utiliza para isso. A Shield Labs não recebe esses dados como parte do funcionamento do aplicativo, não os utiliza para identificar ninguém e não constrói perfis a partir deles.</p>
+            <p><strong>A ressalva honesta:</strong> como em qualquer acesso à internet, o servidor que entrega o arquivo enxerga o <strong>endereço IP</strong> de onde partiu a conexão e a data e hora do download. Isso vale para a Cloudflare e para os mantenedores das listas públicas. É uma característica de como a internet funciona, não uma coleta feita por nós — mas você tem o direito de saber, e por isso está escrito aqui. Nós não recebemos nem temos acesso a esses registros.</p>
           </div>
 
-          <!-- REVISAR -->
-          <p>A Shield Labs não utiliza nenhum registro de acesso ao arquivo da lista para análise de comportamento, estatística de uso ou identificação de usuários.</p>
+          <p>Fora esses downloads, o aplicativo não faz nenhuma outra conexão.</p>
         </section>
 
         <section class="doc-section" id="terceiros">
-          <h2>7. Terceiros</h2>
+          <h2>6. Terceiros</h2>
 
-          <p>Estes são todos os terceiros envolvidos no funcionamento e na distribuição do Aegis, e exatamente o que cada um enxerga. Não há outros.</p>
-
-          <!-- REVISAR -->
           <div class="table-wrap" tabindex="0" role="region" aria-label="Terceiros envolvidos no funcionamento do Aegis">
             <table class="doc-table">
               <thead>
                 <tr>
-                  <th>Terceiro</th>
-                  <th>Função</th>
-                  <th>O que ele enxerga</th>
-                  <th>Política</th>
+                  <th>Quem</th>
+                  <th>Para quê</th>
+                  <th>O que enxerga</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>Cloudflare (armazenamento Cloudflare R2)</td>
-                  <td>Hospeda o arquivo da lista de bloqueio que o aplicativo baixa.</td>
-                  <td>O endereço IP da conexão e o horário da requisição, como qualquer servidor web enxerga. Não recebe dados de navegação, não recebe identificador de usuário e não recebe informação sobre as suas configurações.</td>
-                  <td><a href="https://www.cloudflare.com/privacypolicy/" rel="noopener">Política da Cloudflare</a></td>
+                  <td><strong>Cloudflare</strong></td>
+                  <td>Hospedagem da lista de bloqueio</td>
+                  <td>O IP da conexão e a data/hora do download</td>
                 </tr>
                 <tr>
-                  <td>Fontes públicas de listas de bloqueio</td>
-                  <td>Mantêm listas de domínios usadas na cobertura estendida do filtro.</td>
-                  <td>O mesmo e nada além: o endereço IP da conexão e o horário, no momento do download da lista.</td>
-                  <td>Políticas publicadas por cada fonte</td>
+                  <td><strong>Fontes públicas de bloqueio</strong></td>
+                  <td>Cobertura estendida</td>
+                  <td>O IP da conexão e a data/hora do download</td>
                 </tr>
                 <tr>
-                  <td>Google Play (Google LLC) — distribuição</td>
-                  <td>Distribui e atualiza o aplicativo.</td>
-                  <td>Os dados que a própria Google trata para operar a loja: conta Google, aparelho, instalações e atualizações. Isso ocorre entre você e a Google, independentemente do Aegis.</td>
-                  <td><a href="https://policies.google.com/privacy" rel="noopener">policies.google.com/privacy</a></td>
-                </tr>
-                <tr>
-                  <td>Google Play (Google LLC) — assinaturas</td>
-                  <td>Quando houver assinaturas, processa integralmente a compra, a cobrança e a renovação.</td>
-                  <td>Os dados de pagamento do usuário, segundo as regras da própria Google. A Shield Labs recebe apenas a informação de que existe uma assinatura ativa ou não, e nunca dados de cartão.</td>
-                  <td><a href="https://policies.google.com/privacy" rel="noopener">policies.google.com/privacy</a></td>
+                  <td><strong>Google Play</strong></td>
+                  <td>Distribuição do aplicativo e, quando houver, assinaturas</td>
+                  <td>Conforme a política do Google</td>
                 </tr>
               </tbody>
             </table>
           </div>
 
-          <p>Não há nesta lista nenhuma empresa de publicidade, nenhuma plataforma de analytics, nenhum serviço de monitoramento de falhas e nenhum intermediário de dados. A Shield Labs não vende, não aluga e não compartilha dados pessoais com terceiros para fins comerciais ou de marketing.</p>
+          <p>Não há nenhum outro terceiro envolvido. Não usamos serviços de publicidade, de análise de comportamento ou de rastreamento.</p>
 
-          <p>Registramos, por transparência, que o sistema Android e a Google Play podem coletar informações do aparelho de acordo com as configurações do próprio sistema operacional e com as escolhas que você fez na sua conta Google. Isso está fora do controle da Shield Labs e não depende do Aegis.</p>
+          <h3>Relatórios de falha</h3>
+
+          <p>Se você tiver ativado, nas configurações do Android, o envio de dados de diagnóstico ao Google, o Google pode nos disponibilizar relatórios técnicos de travamentos do aplicativo. Esses relatórios são gerados e controlados pelo Android, contêm informações técnicas sobre o erro (como a versão do sistema e o ponto do código em que a falha ocorreu) e <strong>não contêm sites, domínios ou histórico de navegação</strong>. Você pode desativar esse envio nas configurações do próprio Android.</p>
         </section>
 
         <section class="doc-section" id="permissoes">
-          <h2>8. Permissões e por que cada uma existe</h2>
+          <h2>7. Permissões que o aplicativo solicita</h2>
 
-          <p>Pedimos o mínimo necessário. Cada permissão abaixo tem uma justificativa direta, e dizemos também o que ela não permite fazer.</p>
-
-          <!-- REVISAR -->
           <div class="table-wrap" tabindex="0" role="region" aria-label="Permissões solicitadas pelo aplicativo">
             <table class="doc-table">
               <thead>
                 <tr>
                   <th>Permissão</th>
-                  <th>Por que existe</th>
-                  <th>O que ela não faz</th>
+                  <th>Para quê</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>VPN (serviço de VPN do Android)</td>
-                  <td>Cria a interface de rede local que permite ao aplicativo ver o nome do domínio solicitado e bloquear os que estão na lista, tudo dentro do aparelho.</td>
-                  <td>Não roteia o seu tráfego por servidores da Shield Labs, não descriptografa conexões, não instala certificados e não registra o que você acessa.</td>
+                  <td><strong>VPN (VpnService)</strong></td>
+                  <td>Filtrar localmente, dentro do aparelho, os endereços bloqueados. Não roteia seu tráfego para fora.</td>
                 </tr>
                 <tr>
-                  <td>Notificações</td>
-                  <td>Mostrar que a proteção está ativa — o Android exige uma notificação persistente enquanto um serviço de VPN estiver em funcionamento — e exibir avisos do próprio aplicativo.</td>
-                  <td>Não envia nada para fora do aparelho. Não há notificações vindas de servidores, porque não há servidores.</td>
+                  <td><strong>Notificações</strong></td>
+                  <td>Mostrar o aviso de que a proteção está ativa. O Android exige essa notificação enquanto o serviço estiver funcionando.</td>
                 </tr>
                 <tr>
-                  <td>Estado da rede</td>
-                  <td>Saber se há conexão e perceber trocas de rede, como passar do Wi-Fi para os dados móveis, para manter o filtro funcionando sem interrupção.</td>
-                  <td>Não identifica qual rede é, não lê senhas de Wi-Fi e não serve para deduzir a sua localização.</td>
+                  <td><strong>Estado da rede</strong></td>
+                  <td>Perceber trocas de rede (Wi-Fi, dados móveis) para manter a proteção coerente.</td>
+                </tr>
+                <tr>
+                  <td><strong>Internet</strong></td>
+                  <td>Baixar a lista de bloqueio.</td>
                 </tr>
               </tbody>
             </table>
           </div>
 
-          <p>Se, em uma versão futura, o Aegis passar a solicitar alguma permissão que não esteja nesta tabela, esta política será atualizada antes, e a mudança será comunicada conforme a seção 14.</p>
+          <p>O aplicativo <strong>não</strong> solicita acesso a contatos, localização, câmera, microfone, fotos ou arquivos.</p>
         </section>
 
         <section class="doc-section" id="assinaturas">
-          <h2>9. Assinaturas</h2>
+          <h2>8. Assinaturas</h2>
 
-          <p>Quando houver assinaturas, elas são processadas <strong>integralmente pela Google Play</strong>. A compra, a cobrança, a renovação, o cancelamento e eventuais reembolsos seguem as regras e a política da Google, dentro da própria loja.</p>
+          <p>Quando houver planos pagos, as assinaturas serão processadas <strong>pelo Google Play</strong>. Isso significa que:</p>
 
           <ul class="doc-list">
-            <li>A Shield Labs <strong>nunca vê dados de cartão</strong>, número de conta bancária, código de segurança ou endereço de cobrança. Esses dados são tratados pela Google e não passam pelo aplicativo.</li>
-            <li>A única informação que chega até nós é o <strong>status da assinatura</strong>: se ela está ativa ou não. Nada além disso.</li>
-            <!-- REVISAR -->
-            <li>O cancelamento é feito nas configurações de assinaturas da sua conta na Google Play, a qualquer momento, sem passar por nós.</li>
+            <li>Os dados de pagamento são tratados pelo Google, conforme a política dele.</li>
+            <li>A Shield Labs <strong>não recebe e não armazena</strong> dados de cartão ou meios de pagamento.</li>
+            <li>Recebemos apenas a informação de que a assinatura está ativa, para liberar os recursos do plano.</li>
+            <li>O cancelamento é feito diretamente pela sua conta do Google Play.</li>
           </ul>
 
-          <p>Nenhuma informação sobre a sua navegação, sobre os sites bloqueados ou sobre o seu uso do aplicativo é vinculada a uma assinatura. Assinar não cria conta, não cria perfil e não altera nada do que está descrito nas seções 4, 5 e 6.</p>
+          <p><strong>A proteção básica do aplicativo nunca depende de pagamento.</strong> Se uma assinatura for cancelada ou expirar, o bloqueio básico continua funcionando.</p>
         </section>
 
         <section class="doc-section" id="guardiao">
-          <h2>10. Guardião</h2>
+          <h2>9. Guardião</h2>
 
-          <p>O termo "guardião" designa duas coisas diferentes no Aegis. Uma existe hoje; a outra é um plano futuro. Elas são descritas separadamente para que não haja confusão sobre o que está em funcionamento agora.</p>
+          <p>O Aegis tem — ou terá — dois recursos diferentes com esse nome. Eles funcionam de forma distinta.</p>
 
-          <p><strong>Guardião local — existe na versão atual.</strong> É um PIN definido no aparelho, que protege as configurações do aplicativo contra uma mudança feita por impulso. Sobre ele:</p>
+          <p><strong>Guardião local (disponível):</strong> uma pessoa de confiança define um PIN de 6 dígitos no seu próprio aparelho, e esse PIN passa a ser necessário para desligar a proteção. O PIN fica <strong>somente no aparelho</strong>, guardado de forma cifrada. Ele nunca é transmitido e nós não temos acesso a ele.</p>
 
-          <ul class="doc-list">
-            <li>O PIN é armazenado como <strong>hash</strong>, ou seja, uma representação irreversível. O PIN em texto não é guardado em lugar nenhum.</li>
-            <li>Ele fica <strong>somente no seu aparelho</strong>, no armazenamento privado do aplicativo.</li>
-            <li>Ele <strong>nunca é transmitido</strong>. A Shield Labs não recebe, não guarda e não tem como recuperar esse PIN.</li>
-            <!-- REVISAR -->
-            <li>Como consequência direta disso: se o PIN for esquecido, não conseguimos redefini-lo remotamente, porque não temos cópia dele.</li>
-          </ul>
-
-          <p><strong>Guardião remoto — não existe na versão atual.</strong> É um recurso planejado, no qual outra pessoa de confiança poderia acompanhar e aprovar mudanças na proteção. Ele <strong>não está disponível hoje</strong> e nenhuma parte dele opera no aplicativo neste momento. Quando e se for lançado, valerão os compromissos abaixo, e esta política será atualizada antes de o recurso entrar em funcionamento:</p>
-
-          <ul class="doc-list">
-            <li>Será <strong>opcional</strong>, ativado apenas por escolha explícita sua.</li>
-            <li>Tratará exclusivamente <strong>metadados de proteção</strong>: se a proteção está ligada ou desligada, e eventos de pedido e aprovação de mudança.</li>
-            <li><strong>Nunca tratará dados de navegação.</strong> O guardião não verá quais sites você acessou nem quais foram bloqueados — nem hoje, nem quando o recurso existir.</li>
-          </ul>
+          <p><strong>Guardião remoto (ainda não disponível):</strong> permitirá que a pessoa de confiança aprove ou recuse pedidos a partir do aparelho dela. Quando existir, trafegará <strong>apenas informações sobre o estado da proteção</strong> — se está ligada, e os pedidos e respostas de autorização. <strong>Nunca</strong> trafegará sites visitados, domínios, consultas de DNS ou histórico de navegação. Esse recurso será opcional e exigirá o seu consentimento explícito.</p>
         </section>
 
-        <section class="doc-section" id="criancas">
-          <h2>11. Crianças e adolescentes</h2>
+        <section class="doc-section" id="publico">
+          <h2>10. Público do aplicativo</h2>
 
-          <p>O Aegis é destinado a <strong>pessoas maiores de 18 anos</strong>. O aplicativo não é direcionado a crianças, não é divulgado para o público infantil e não trata conscientemente dados de crianças ou adolescentes.</p>
-
-          <p>Como o aplicativo não coleta dados pessoais em servidores — não há cadastro, não há conta e nenhuma informação de uso sai do aparelho — não existe base de dados na qual dados de menores pudessem ter sido armazenados por nós.</p>
-
-          <p>Se um pai, mãe ou responsável legal tiver qualquer dúvida a respeito, pode nos escrever pelo canal indicado na seção 15.</p>
+          <p>O Aegis é destinado a <strong>maiores de 18 anos</strong>. Não é direcionado a crianças e não coletamos conscientemente dados de menores de idade.</p>
         </section>
 
         <section class="doc-section" id="retencao-exclusao">
-          <h2>12. Retenção e exclusão</h2>
+          <h2>11. Retenção e exclusão de dados</h2>
 
-          <p>Retenção é uma pergunta simples de responder quando quase nada é guardado. Item a item:</p>
+          <p>Como não coletamos dados pessoais em servidores nossos, <strong>não há dados armazenados para excluir</strong>.</p>
 
-          <ul class="doc-list">
-            <li><strong>Nomes de domínio lidos pelo filtro:</strong> permanecem apenas em memória, pelo tempo da decisão de bloquear ou permitir, e são descartados em seguida. Não há retenção, porque não há gravação.</li>
-            <li><strong>Configurações locais</strong> (proteção ligada/desligada, estado de compromisso, hash do PIN do guardião): permanecem no aparelho enquanto o aplicativo estiver instalado, ou até que você as altere.</li>
-            <li><strong>Dados em servidores da Shield Labs:</strong> não existem. Não mantemos base de dados de usuários do Aegis.</li>
-          </ul>
-
-          <p><strong>Como apagar tudo.</strong> Justamente porque nada é coletado por nós, não há a quem pedir exclusão — o controle é integralmente seu, e é imediato:</p>
-
-          <ol class="doc-list">
-            <!-- REVISAR: confirmar se o backup automatico do Android (allowBackup) esta desativado para o app -->
-            <li><strong>Desinstalar o aplicativo</strong> remove o armazenamento privado do Aegis — as configurações locais, o estado de compromisso e o hash do PIN do guardião —, seguindo o funcionamento do Android para dados de aplicativo.</li>
-            <li><strong>Limpar os dados do aplicativo</strong> nas configurações do Android produz o mesmo efeito sobre os dados locais, sem desinstalar.</li>
-          </ol>
-
-          <p>Depois de qualquer uma dessas ações, não resta nenhuma informação sua conosco — pela simples razão de que nunca houve.</p>
-
-          <p>Duas ressalvas honestas, sobre o que não está sob o nosso controle: (a) a <strong>Google Play</strong> mantém o histórico de compras e assinaturas conforme a política da própria Google e as obrigações fiscais aplicáveis, e essa exclusão deve ser tratada diretamente com a Google; (b) se você nos escrever por e-mail, a mensagem trocada fica na nossa caixa de correio, e você pode pedir a sua exclusão a qualquer momento pelo mesmo canal.</p>
+          <p>As informações que existem ficam no seu aparelho e são removidas quando você desinstala o aplicativo. Se você usar o backup do Android, talvez seja necessário remover o backup pela sua conta Google.</p>
         </section>
 
         <section class="doc-section" id="direitos">
-          <h2>13. Direitos do titular (LGPD)</h2>
+          <h2>12. Seus direitos (LGPD)</h2>
 
-          <p>A Lei Geral de Proteção de Dados (Lei nº 13.709/2018) garante a você, titular dos dados, um conjunto de direitos sobre o tratamento de dados pessoais. Nós os respeitamos integralmente. Ao mesmo tempo, seria desonesto apresentar aqui uma lista longa de procedimentos sem dizer o essencial: <strong>a maior parte desses direitos não tem objeto no caso do Aegis, porque não há coleta de dados pessoais para exercer direito sobre</strong>. Não é uma evasiva; é a consequência direta da arquitetura descrita nas seções 4, 5 e 6.</p>
+          <p>A Lei Geral de Proteção de Dados (Lei nº 13.709/2018) garante a você, entre outros, os direitos de confirmar a existência de tratamento, acessar seus dados, corrigi-los, solicitar anonimização ou exclusão, e revogar consentimento.</p>
 
-          <p>Os direitos previstos no art. 18 da LGPD são:</p>
+          <p>Sendo transparente com você: na prática, <strong>a maior parte desses direitos não tem objeto aqui</strong>, justamente porque não coletamos dados pessoais. Não temos um cadastro seu para mostrar, corrigir ou apagar.</p>
 
-          <ul class="doc-list">
-            <li>Confirmação da existência de tratamento.</li>
-            <li>Acesso aos dados.</li>
-            <li>Correção de dados incompletos, inexatos ou desatualizados.</li>
-            <li>Anonimização, bloqueio ou eliminação de dados desnecessários, excessivos ou tratados em desconformidade com a lei.</li>
-            <li>Portabilidade dos dados a outro fornecedor, mediante requisição expressa.</li>
-            <li>Eliminação dos dados pessoais tratados com base no consentimento.</li>
-            <li>Informação sobre as entidades públicas e privadas com as quais houve compartilhamento.</li>
-            <li>Informação sobre a possibilidade de não fornecer consentimento e sobre as consequências da negativa.</li>
-            <li>Revogação do consentimento.</li>
-          </ul>
+          <p>Ainda assim, o canal está aberto. Para qualquer pedido, dúvida ou reclamação relacionada a dados pessoais, escreva para <strong><a href="mailto:contato@shieldlabs.app">contato@shieldlabs.app</a></strong>. Responderemos dentro dos prazos previstos na lei.</p>
 
-          <p><strong>Como isso se aplica aqui.</strong> Se você nos escrever pedindo confirmação de tratamento ou acesso aos seus dados, a resposta será que não mantemos dados pessoais seus — e explicaremos por quê. Não há o que corrigir, portar ou eliminar em nossos sistemas, porque não há registro. Os terceiros com quem existe qualquer contato técnico estão nominalmente listados na seção 7. Os dados que existem estão no seu aparelho, sob o seu controle, e podem ser apagados por você a qualquer momento conforme a seção 12.</p>
+          <p>Você também pode apresentar reclamação à Autoridade Nacional de Proteção de Dados (ANPD).</p>
+        </section>
 
-          <p><strong>Base legal.</strong> Nas hipóteses residuais em que há tratamento — o status de assinatura vindo da Google Play e a troca de mensagens quando você nos escreve — o fundamento é a execução de contrato ou de procedimentos preliminares a pedido do titular (art. 7º, V) e o atendimento a obrigação legal ou regulatória (art. 7º, II), conforme o caso.</p>
+        <section class="doc-section" id="seguranca">
+          <h2>13. Segurança</h2>
 
-          <p><strong>Decisões automatizadas (art. 20).</strong> A decisão de bloquear ou permitir um domínio é automática, mas ocorre inteiramente no seu aparelho, com base em uma lista pública, e não envolve qualquer avaliação de aspectos da sua personalidade, do seu comportamento ou do seu perfil. Se um site legítimo for bloqueado por engano, ou se um site de aposta não estiver na lista, escreva para nós e corrigiremos a lista.</p>
+          <p>O aplicativo foi construído para que a privacidade não dependa da nossa boa vontade, e sim da arquitetura: como os dados de navegação nunca saem do aparelho, não existe base de dados nossa que possa vazar, ser invadida ou ser vendida.</p>
 
-          <p><strong>Como exercer.</strong> Basta escrever para o e-mail indicado na seção 15, descrevendo o pedido. Responderemos no prazo previsto no art. 19 da LGPD. Você não precisa se identificar além do necessário para responder à solicitação, nem explicar seus motivos pessoais para usar o aplicativo.</p>
-
-          <p>Se entender que os seus direitos não foram atendidos, você pode apresentar reclamação à Autoridade Nacional de Proteção de Dados (ANPD).</p>
+          <p>A lista de bloqueio baixada pelo aplicativo é verificada por assinatura criptográfica antes de ser instalada, para impedir que uma lista adulterada seja aplicada.</p>
         </section>
 
         <section class="doc-section" id="alteracoes">
           <h2>14. Alterações nesta política</h2>
 
-          <p>Esta política pode mudar quando o aplicativo mudar, quando um novo recurso for lançado ou quando a legislação exigir. Nossos compromissos sobre isso:</p>
-
-          <ul class="doc-list">
-            <li><strong>Versionamento por data.</strong> A data de vigência e a data da última atualização, no topo desta página e na seção 1, indicam sempre a versão em vigor.</li>
-            <li><strong>Aviso antes, não depois.</strong> Se uma alteração ampliar o tratamento de dados — por exemplo, se o guardião remoto descrito na seção 10 for lançado — a mudança será publicada aqui e comunicada dentro do aplicativo <strong>antes</strong> de entrar em vigor.</li>
-            <li><strong>Sem mudança silenciosa.</strong> Correções de redação e ajustes de clareza podem ocorrer sem aviso destacado, mas nunca alteram o que é coletado. Qualquer mudança no que é coletado é uma mudança destacada.</li>
-            <li><strong>Coerência com a Google Play.</strong> Toda atualização desta página deve ser acompanhada da atualização correspondente no formulário de Segurança de Dados do Play Console, para que as duas descrições continuem idênticas.</li>
-          </ul>
+          <p>Se esta política mudar, atualizaremos a data no topo e publicaremos a nova versão nesta mesma página. Mudanças relevantes — especialmente qualquer mudança no que é ou não coletado — serão comunicadas dentro do aplicativo.</p>
         </section>
 
         <section class="doc-section" id="contato">
           <h2>15. Contato</h2>
 
-          <p>Este é um endereço real, monitorado por pessoas:</p>
+          <p><strong>Shield Labs Desenvolvimento de Software Não Customizável LTDA</strong><br>
+            CNPJ 68.123.924/0001-19</p>
 
-          <p><a href="mailto:contato@shieldlabs.app">contato@shieldlabs.app</a></p>
-
-          <p>Escreva para tirar dúvidas sobre esta política, exercer os direitos da seção 13, relatar um site de aposta que passou pelo filtro, relatar um site legítimo bloqueado por engano ou pedir qualquer esclarecimento sobre o funcionamento do aplicativo.</p>
-
-          <!-- REVISAR -->
-          <p>Respondemos em até 2 dias úteis. Para solicitações fundamentadas na LGPD, o prazo é o previsto no art. 19 da lei.</p>
-
-          <p>Você não precisa contar a sua história para receber suporte, e não precisa se justificar. Uma dúvida sobre o aplicativo é uma dúvida sobre o aplicativo.</p>
+          <p>Privacidade e proteção de dados: <strong><a href="mailto:contato@shieldlabs.app">contato@shieldlabs.app</a></strong><br>
+            Suporte sobre o aplicativo: <strong><a href="mailto:suporte@shieldlabs.app">suporte@shieldlabs.app</a></strong></p>
         </section>
       </div>
     </div>
@@ -464,23 +367,24 @@
       <div class="footer-grid">
         <div class="footer-about">
           <a class="brand" href="../">
-            <svg class="brand-mark" viewBox="0 0 64 64" fill="currentColor" fill-rule="evenodd" aria-hidden="true" focusable="false">
-          <path d="M32 5 L55 13 L55 31 C55 44 45 53.5 32 59 C19 53.5 9 44 9 31 L9 13 Z M32 18 L45.5 44 L18.5 44 Z"/>
-        </svg>
+            <img class="brand-mark" src="../assets/img/shield-light-64.png" alt="" width="64" height="64">
             Shield Labs
           </a>
           <p>Tecnologia brasileira feita para proteger pessoas quando a força de vontade falha.</p>
+          <p class="mt-2">
+            Privacidade e LGPD: <a href="mailto:contato@shieldlabs.app">contato@shieldlabs.app</a><br>
+            Suporte do aplicativo: <a href="mailto:suporte@shieldlabs.app">suporte@shieldlabs.app</a>
+          </p>
         </div>
         <ul class="footer-nav">
-          <li><a href="../#como-funciona">Como funciona</a></li>
-          <li><a href="../privacidade/">Privacidade</a></li>
+          <li><a href="../aegis/">Aegis</a></li>
+          <li><a href="./" aria-current="page">Privacidade</a></li>
           <li><a href="../termos/">Termos de uso</a></li>
           <li><a href="../suporte/">Suporte</a></li>
         </ul>
       </div>
       <div class="footer-legal">
-        <!-- REVISAR: preencher razão social completa e CNPJ -->
-        <p>[RAZÃO SOCIAL COMPLETA] · CNPJ [CNPJ] · Brasil</p>
+        <p>Shield Labs Desenvolvimento de Software Não Customizável LTDA · CNPJ 68.123.924/0001-19 · Brasil</p>
         <p>© 2026 Shield Labs</p>
       </div>
     </div>
