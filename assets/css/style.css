@@ -291,7 +291,10 @@ strong { font-weight: 600; color: var(--silver); }
   list-style: none;
 }
 
+/* padding-block keeps the target at or above the 24px WCAG 2.5.8 minimum */
 .nav-links a {
+  display: inline-block;
+  padding-block: 6px;
   color: var(--steel);
   font-size: .9375rem;
   font-weight: 500;

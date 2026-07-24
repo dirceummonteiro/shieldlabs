@@ -56,12 +56,17 @@
     });
 
     /* Rotating to landscape can cross the breakpoint with the panel open. The CSS hides
-       the panel, but `inert` is a JS property no media query undoes — the page would stay
-       untabbable. Mirrors the 819px breakpoint in style.css. */
+       the panel, but `inert` is a JS property no media query undoes, so the page would
+       stay untabbable. Mirrors the 819px breakpoint in style.css.
+       Both listeners on purpose: matchMedia alone does not fire in every environment. */
     var desktop = window.matchMedia("(min-width: 820px)");
-    desktop.addEventListener("change", function (e) {
-      if (e.matches) fecharMenu();
-    });
+
+    function fecharSeDesktop() {
+      if (desktop.matches) fecharMenu();
+    }
+
+    desktop.addEventListener("change", fecharSeDesktop);
+    window.addEventListener("resize", fecharSeDesktop);
   }
 
   /* ---------- Links desativados (Em breve na Google Play) ---------- */
