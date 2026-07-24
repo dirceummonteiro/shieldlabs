@@ -3,22 +3,22 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Shield.labs — Tecnologia brasileira de proteção pessoal</title>
-  <meta name="description" content="A Shield.labs desenvolve aplicativos de proteção pessoal, feitos no Brasil. Conheça o Aegis, nosso primeiro produto.">
+  <title>Aegis — bloqueio de sites de aposta no Android | Shield Labs</title>
+  <meta name="description" content="O Aegis bloqueia sites de aposta no seu Android. Plano gratuito, sem conta e sem cadastro: o filtro roda no próprio aparelho e nada sobre a sua navegação sai dele.">
   <link rel="canonical" href="https://shieldlabs.app/">
 
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Shield.labs">
+  <meta property="og:site_name" content="Shield Labs">
   <meta property="og:locale" content="pt_BR">
-  <meta property="og:title" content="Shield.labs — Tecnologia brasileira de proteção pessoal">
-  <meta property="og:description" content="Não criamos apenas aplicativos. Criamos proteção para os momentos em que resistir sozinho não é suficiente.">
+  <meta property="og:title" content="Aegis — bloqueio de sites de aposta no Android">
+  <meta property="og:description" content="Plano gratuito, sem conta e sem cadastro. O filtro roda no próprio aparelho e nada sobre a sua navegação sai dele.">
   <meta property="og:url" content="https://shieldlabs.app/">
   <meta property="og:image" content="https://shieldlabs.app/assets/img/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Shield.labs — Tecnologia brasileira de proteção pessoal">
-  <meta name="twitter:description" content="Não criamos apenas aplicativos. Criamos proteção para os momentos em que resistir sozinho não é suficiente.">
+  <meta name="twitter:title" content="Aegis — bloqueio de sites de aposta no Android">
+  <meta name="twitter:description" content="Plano gratuito, sem conta e sem cadastro. O filtro roda no próprio aparelho e nada sobre a sua navegação sai dele.">
   <meta name="twitter:image" content="https://shieldlabs.app/assets/img/og-image.png">
 
   <meta name="theme-color" content="#040E1E">
@@ -28,9 +28,10 @@
   <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon-180.png">
   <link rel="manifest" href="site.webmanifest">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap">
+  <link rel="preload" href="assets/fonts/poppins-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/poppins-500.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/poppins-600.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/poppins-700.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/css/style.css">
   <script src="assets/js/main.js" defer></script>
 
@@ -38,170 +39,284 @@
   {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "Shield.labs",
+    "name": "Shield Labs",
     "url": "https://shieldlabs.app/",
     "logo": "https://shieldlabs.app/assets/img/logo-aegis.png",
     "email": "contato@shieldlabs.app",
-    "description": "Empresa brasileira de tecnologia que desenvolve aplicativos de proteção pessoal.",
+    "description": "Empresa brasileira de tecnologia. Desenvolve o Aegis, aplicativo Android que bloqueia sites de aposta no próprio aparelho.",
     "address": { "@type": "PostalAddress", "addressCountry": "BR" }
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Aegis",
+    "url": "https://shieldlabs.app/",
+    "image": "https://shieldlabs.app/assets/img/logo-aegis.png",
+    "operatingSystem": "Android",
+    "applicationCategory": "UtilitiesApplication",
+    "inLanguage": "pt-BR",
+    "description": "Aplicativo Android que bloqueia sites de aposta por meio de um filtro de VPN local, sem conta e sem enviar dados de navegação para fora do aparelho.",
+    "publisher": { "@type": "Organization", "name": "Shield Labs", "url": "https://shieldlabs.app/" }
+  }
+  </script>
+  <noscript>
+    <style>
+      .nav-toggle { display: none !important; }
+      @media (max-width: 819px) {
+        .nav-links {
+          position: static; display: flex; flex-direction: row; flex-wrap: wrap;
+          gap: 0 var(--s-2); padding: 0; background: none; backdrop-filter: none; z-index: auto;
+        }
+        .nav-links a { padding: 6px 0; font-size: .875rem; }
+        .nav { height: auto; flex-wrap: wrap; gap: var(--s-1); padding-block: var(--s-1); }
+        body { padding-top: 116px; }
+      }
+    </style>
+  </noscript>
 </head>
 <body>
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
   <header class="site-header">
     <div class="container nav">
-      <a class="brand" href="./">
-        <img src="assets/img/logo-aegis.png" alt="" width="34" height="34">
-        Shield.labs
+      <a class="brand" href="./" aria-label="Shield Labs — início">
+        <svg class="brand-mark" viewBox="0 0 64 64" fill="currentColor" fill-rule="evenodd" aria-hidden="true" focusable="false">
+          <path d="M32 5 L55 13 L55 31 C55 44 45 53.5 32 59 C19 53.5 9 44 9 31 L9 13 Z M32 18 L45.5 44 L18.5 44 Z"/>
+        </svg>
+        Shield Labs
       </a>
       <nav aria-label="Navegação principal">
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Abrir menu">
           <span></span><span></span><span></span>
         </button>
         <ul class="nav-links" id="nav-menu">
-          <li><a href="aegis/">Aegis</a></li>
-          <li><a href="aegis/suporte/">Suporte</a></li>
-          <li><a href="aegis/suporte/#contato">Contato</a></li>
+          <li><a href="#como-funciona">Como funciona</a></li>
+          <li><a href="#privacidade">Privacidade</a></li>
+          <li><a href="#planos">Planos</a></li>
+          <li><a href="suporte/">Suporte</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main id="conteudo">
+  <main id="conteudo" tabindex="-1">
 
     <!-- 1. Hero -->
     <section class="hero">
       <div class="container">
-        <div class="hero-icon">
-          <img src="assets/img/logo-aegis.png" alt="Ícone do Aegis: escudo azul com anel de meandro grego e filete verde-amarelo" width="200" height="200">
-        </div>
-        <h1>Shield.labs</h1>
-        <p class="eyebrow">Technology</p>
-        <div class="filete" aria-hidden="true"></div>
-        <p class="lead">Não criamos apenas aplicativos. Criamos proteção para os momentos em que resistir sozinho não é suficiente.</p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="aegis/">Conheça o Aegis</a>
-          <a class="btn btn-secondary" href="aegis/suporte/">Falar com a gente</a>
+        <div class="hero-grid">
+          <div>
+            <p class="eyebrow">Aegis · Android</p>
+            <h1>Aegis bloqueia sites de aposta no seu Android.</h1>
+            <p class="lead">Plano gratuito, sem conta e sem cadastro. O filtro roda dentro do próprio aparelho — nada sobre a sua navegação sai dele.</p>
+            <div class="hero-actions">
+              <!-- REVISAR: trocar por href da Google Play e remover aria-disabled quando o app for publicado -->
+              <a class="btn btn-primary" href="#" aria-disabled="true">Em breve na Google Play</a>
+              <a class="btn btn-secondary" href="#como-funciona">Como funciona</a>
+            </div>
+            <p class="hero-tagline">Não criamos apenas aplicativos. Criamos proteção para os momentos em que resistir sozinho não é suficiente.</p>
+          </div>
+          <div class="hero-art">
+            <img src="assets/img/logo-aegis-560.png" alt="Ícone do aplicativo Aegis: um escudo com um anel de meandro grego e um triângulo ao centro" width="560" height="560" fetchpriority="high">
+          </div>
         </div>
       </div>
     </section>
 
-    <svg class="grega" height="14" width="100%" aria-hidden="true" focusable="false">
-      <defs>
-        <pattern id="p-grega-1" width="18" height="14" patternUnits="userSpaceOnUse">
-          <g transform="scale(2)" fill="currentColor">
-            <path d="M0 0h1v7H0zM0 0h8v1H0zM7 0h1v6H7zM3 5h5v1H3zM3 2h1v4H3zM3 2h3v1H3z"/>
-          </g>
-        </pattern>
-      </defs>
-      <rect width="100%" height="14" fill="url(#p-grega-1)"/>
-    </svg>
-
-    <!-- 2. Princípios -->
-    <section class="section">
+    <!-- 2. Como funciona -->
+    <section class="section section-alt" id="como-funciona">
       <div class="container">
         <div class="section-head">
-          <span class="eyebrow">Princípios</span>
-          <h2>O que guia o que construímos</h2>
-          <div class="filete" aria-hidden="true"></div>
+          <p class="eyebrow">Como funciona</p>
+          <h2>Quatro passos, e nenhum deles envolve a gente</h2>
+          <p class="lead">O Aegis não é um serviço que você contrata. É um filtro que passa a morar no seu celular.</p>
         </div>
-        <div class="grid-3">
-          <article class="card" data-reveal>
-            <h3>Privacidade por padrão</h3>
-            <!-- REVISAR -->
-            <p>O que é sensível fica no seu aparelho — não em servidores de terceiros.</p>
-          </article>
-          <article class="card" data-reveal>
-            <h3>Feito no Brasil</h3>
-            <p>Desenvolvido no Brasil, em português, para a realidade brasileira.</p>
-          </article>
-          <article class="card" data-reveal>
-            <h3>Proteção que age</h3>
-            <!-- REVISAR -->
-            <p>Proteção de verdade não apenas observa: age no momento em que você mais precisa.</p>
-          </article>
-        </div>
+        <ol class="steps">
+          <li class="step" data-reveal>
+            <h3>Você ativa a proteção</h3>
+            <p>Na primeira abertura, o Aegis pede a permissão de VPN do Android. É ela que permite filtrar as conexões — e é usada só para isso.</p>
+          </li>
+          <li class="step" data-reveal>
+            <h3>O filtro roda no aparelho</h3>
+            <p>Quando um navegador ou aplicativo tenta abrir um site de aposta que está na lista, a conexão é interrompida ali mesmo, antes de a página carregar.</p>
+          </li>
+          <li class="step" data-reveal>
+            <h3>Nada é enviado para fora</h3>
+            <p>Os domínios são lidos na memória só para decidir bloquear ou liberar, e descartados em seguida. Não existe conta, então não existe um perfil seu em lugar nenhum.</p>
+          </li>
+          <li class="step" data-reveal>
+            <h3>Continua valendo offline</h3>
+            <p>O bloqueio não depende de conexão com a Shield Labs. Sem internet, sem servidor no meio: o app segue funcionando.</p>
+          </li>
+        </ol>
       </div>
     </section>
 
-    <!-- 3. Produto -->
-    <section class="section pt-0">
+    <!-- 3. Privacidade -->
+    <section class="section" id="privacidade">
       <div class="container">
-        <article class="card product-card" data-reveal>
-          <img src="assets/img/logo-aegis.png" alt="Ícone do aplicativo Aegis" width="140" height="140" loading="lazy">
-          <div>
-            <span class="eyebrow">Produto</span>
-            <h2>Aegis</h2>
-            <!-- REVISAR -->
-            <p class="tagline">Proteção pessoal para os momentos decisivos.</p>
-            <!-- REVISAR -->
-            <p>O primeiro aplicativo da Shield.labs: uma camada de proteção que fica com você e age quando resistir sozinho não é suficiente.</p>
-            <a class="arrow-link" href="aegis/">Ver o Aegis <span aria-hidden="true">→</span></a>
+        <div class="privacy" data-reveal>
+          <div class="privacy-grid">
+            <div>
+              <p class="eyebrow">Privacidade</p>
+              <h2>A permissão de VPN é a parte que mais assusta. Com razão.</h2>
+              <div class="filete" aria-hidden="true"></div>
+              <p>Um aplicativo com permissão de VPN poderia, em tese, enxergar tudo o que você faz. É justo desconfiar — e é por isso que a resposta precisa ser específica, não uma promessa genérica.</p>
+              <p>O Aegis usa essa permissão para uma coisa só: comparar o domínio que está sendo acessado com a lista de bloqueio, dentro do seu aparelho.</p>
+              <p class="mt-3"><a class="arrow-link" href="privacidade/">Ler a política de privacidade completa</a></p>
+            </div>
+            <div>
+              <ul class="claims">
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>
+                  <span><strong>Nada é roteado por nós</strong>O Aegis não é um proxy. Seu tráfego não passa por servidores da Shield Labs.</span>
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>
+                  <span><strong>Nada é descriptografado</strong>Não há interceptação de TLS e você não precisa instalar nenhum certificado.</span>
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>
+                  <span><strong>Nada é registrado</strong>Sem log de navegação, sem histórico, sem telemetria, sem analytics, sem SDK de anúncios.</span>
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg>
+                  <span><strong>Não existe conta</strong>Sem login, sem cadastro, sem e-mail. Não há um perfil seu que possa vazar.</span>
+                </li>
+              </ul>
+              <div class="doc-callout mt-3">
+                <p><strong>A exceção, escrita aqui e não em letra miúda:</strong> o app baixa a lista de bloqueio de um armazenamento público (Cloudflare R2) por HTTPS. É só download — nada sobre você é enviado —, mas, como em qualquer acesso à web, o provedor enxerga o endereço IP e o horário da conexão.</p>
+              </div>
+            </div>
           </div>
-        </article>
+        </div>
       </div>
     </section>
 
-    <svg class="grega" height="14" width="100%" aria-hidden="true" focusable="false">
-      <defs>
-        <pattern id="p-grega-2" width="18" height="14" patternUnits="userSpaceOnUse">
-          <g transform="scale(2)" fill="currentColor">
-            <path d="M0 0h1v7H0zM0 0h8v1H0zM7 0h1v6H7zM3 5h5v1H3zM3 2h1v4H3zM3 2h3v1H3z"/>
-          </g>
-        </pattern>
-      </defs>
-      <rect width="100%" height="14" fill="url(#p-grega-2)"/>
-    </svg>
-
-    <!-- 4. Peça de marca -->
-    <section class="section">
-      <div class="container split">
-        <div class="phone" data-reveal>
-          <img src="assets/img/aegis-story.png" alt="Peça de divulgação vertical do Aegis, com o escudo da marca sobre fundo navy" width="1080" height="1920" loading="lazy">
+    <!-- 4. O que ele não faz -->
+    <section class="section" id="limites">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Limites</p>
+          <h2>O que o Aegis não faz</h2>
+          <p class="lead">Nenhum bloqueio é completo, e preferimos que você saiba disso antes de instalar.</p>
         </div>
-        <div data-reveal>
-          <span class="eyebrow">Manifesto</span>
-          <h2>Tecnologia brasileira criada para proteger pessoas quando a força de vontade falha.</h2>
-          <div class="filete" aria-hidden="true"></div>
-          <img class="brand-post" src="assets/img/aegis-post.png" alt="Peça quadrada do Aegis para redes sociais, com o escudo da marca" width="1080" height="1080" loading="lazy">
-          <p class="brand-post-caption">A marca nas redes sociais</p>
+        <ul class="limits">
+          <li data-reveal>
+            <h3>DNS criptografado</h3>
+            <p>Navegadores e aplicativos que resolvem endereços por conta própria, com DNS criptografado (DoH ou DoT), podem passar por fora do filtro.</p>
+          </li>
+          <li data-reveal>
+            <h3>Acesso por IP direto</h3>
+            <p>Um filtro baseado em nomes de domínio não alcança quem digita o endereço IP diretamente.</p>
+          </li>
+          <li data-reveal>
+            <h3>Você pode desligar</h3>
+            <p>A VPN é sua e o Android sempre permite desativá-la. O Aegis não tem como impedir isso — e não tentaria.</p>
+          </li>
+          <li data-reveal>
+            <h3>Domínios novos</h3>
+            <p>Sites de aposta trocam de endereço com frequência. Um domínio espelho recém-criado pode levar algum tempo até entrar na lista.</p>
+          </li>
+        </ul>
+        <p class="plans-note">O Aegis aumenta o atrito no momento em que ele pesa. Não substitui uma decisão sua — dá tempo para ela.</p>
+      </div>
+    </section>
+
+    <!-- 5. Planos -->
+    <section class="section section-alt" id="planos">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Planos</p>
+          <h2>Comece sem pagar nada</h2>
+        </div>
+        <div class="plans">
+          <div class="plan plan-featured" data-reveal>
+            <div class="plan-name">
+              <h3>Gratuito</h3>
+            </div>
+            <p>O bloqueio do dia a dia, sem custo e sem cadastro.</p>
+            <!-- REVISAR: confirmar exatamente o que entra no plano gratuito -->
+            <ul>
+              <li>Bloqueio de sites de aposta</li>
+              <li>Filtro local, sem conta e sem login</li>
+              <li>Funciona offline</li>
+              <li>Sem anúncios e sem rastreamento</li>
+            </ul>
+          </div>
+          <div class="plan" data-reveal>
+            <div class="plan-name">
+              <h3>Premium</h3>
+            </div>
+            <p>Para quem quer a cobertura mais ampla que conseguimos manter.</p>
+            <!-- REVISAR: confirmar o que entra no Premium e o que exatamente o diferencia do gratuito -->
+            <ul>
+              <li>Cobertura estendida da lista de bloqueio</li>
+              <li>Tudo o que está no plano gratuito</li>
+            </ul>
+          </div>
+          <div class="plan plan-soon" data-reveal>
+            <div class="plan-name">
+              <h3>Guardião</h3>
+              <span class="tag">Em breve</span>
+            </div>
+            <p>Ainda não disponível. Quando existir, será opcional.</p>
+            <ul>
+              <li>Uma pessoa de confiança acompanha apenas se a proteção está ligada</li>
+              <li>Nunca o que você acessa: dados de navegação não entram nisso</li>
+            </ul>
+          </div>
+        </div>
+        <p class="plans-note">Os preços ainda não estão definidos. Quando estiverem, a assinatura será processada pela Google Play, e a Shield Labs não terá acesso aos seus dados de pagamento.</p>
+      </div>
+    </section>
+
+    <!-- 6. Suporte -->
+    <section class="section" id="suporte">
+      <div class="container">
+        <div class="contact" data-reveal>
+          <div>
+            <p class="eyebrow">Suporte</p>
+            <!-- REVISAR: confirmar que este endereço é monitorado -->
+            <a class="contact-email" href="mailto:contato@shieldlabs.app">contato@shieldlabs.app</a>
+            <p class="mt-1">Escreva contando o que aconteceu. Quem responde é uma pessoa.</p>
+          </div>
+          <div>
+            <!-- REVISAR: confirmar o tempo médio de resposta -->
+            <p>Respondemos em até 2 dias úteis. Se for uma dúvida comum, talvez a resposta já esteja pronta.</p>
+            <p class="mt-2"><a class="arrow-link" href="suporte/">Ver perguntas frequentes</a></p>
+          </div>
         </div>
       </div>
     </section>
 
   </main>
 
-  <!-- 5. Rodapé -->
   <footer class="site-footer">
-    <svg class="grega" height="14" width="100%" aria-hidden="true" focusable="false">
-      <defs>
-        <pattern id="p-grega-3" width="18" height="14" patternUnits="userSpaceOnUse">
-          <g transform="scale(2)" fill="currentColor">
-            <path d="M0 0h1v7H0zM0 0h8v1H0zM7 0h1v6H7zM3 5h5v1H3zM3 2h1v4H3zM3 2h3v1H3z"/>
-          </g>
-        </pattern>
-      </defs>
-      <rect width="100%" height="14" fill="url(#p-grega-3)"/>
-    </svg>
     <div class="container">
-      <div class="footer-inner">
-        <a class="brand" href="./">
-          <img src="assets/img/logo-aegis.png" alt="" width="28" height="28" loading="lazy">
-          Shield.labs
-        </a>
-        <ul class="footer-links">
-          <li><a href="aegis/">Aegis</a></li>
-          <li><a href="aegis/privacidade/">Privacidade</a></li>
-          <li><a href="aegis/suporte/">Suporte</a></li>
+      <div class="footer-grid">
+        <div class="footer-about">
+          <a class="brand" href="./">
+            <svg class="brand-mark" viewBox="0 0 64 64" fill="currentColor" fill-rule="evenodd" aria-hidden="true" focusable="false">
+              <path d="M32 5 L55 13 L55 31 C55 44 45 53.5 32 59 C19 53.5 9 44 9 31 L9 13 Z M32 18 L45.5 44 L18.5 44 Z"/>
+            </svg>
+            Shield Labs
+          </a>
+          <p>Tecnologia brasileira feita para proteger pessoas quando a força de vontade falha.</p>
+        </div>
+        <ul class="footer-nav">
+          <li><a href="#como-funciona">Como funciona</a></li>
+          <li><a href="privacidade/">Privacidade</a></li>
+          <li><a href="termos/">Termos de uso</a></li>
+          <li><a href="suporte/">Suporte</a></li>
         </ul>
-        <!-- REVISAR -->
-        <a class="footer-mail" href="mailto:contato@shieldlabs.app">contato@shieldlabs.app</a>
       </div>
-      <div class="footer-meta">
-        <p>© 2026 Shield.labs · Brasil</p>
-        <p class="eyebrow">Brasil · Tecnologia &amp; Segurança</p>
+      <div class="footer-legal">
+        <!-- REVISAR: preencher razão social completa e CNPJ -->
+        <p>[RAZÃO SOCIAL COMPLETA] · CNPJ [CNPJ] · Brasil</p>
+        <p>© 2026 Shield Labs</p>
       </div>
     </div>
   </footer>

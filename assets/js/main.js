@@ -54,6 +54,14 @@
     menu.querySelectorAll("a").forEach(function (link) {
       link.addEventListener("click", fecharMenu);
     });
+
+    /* Rotating to landscape can cross the breakpoint with the panel open. The CSS hides
+       the panel, but `inert` is a JS property no media query undoes — the page would stay
+       untabbable. Mirrors the 819px breakpoint in style.css. */
+    var desktop = window.matchMedia("(min-width: 820px)");
+    desktop.addEventListener("change", function (e) {
+      if (e.matches) fecharMenu();
+    });
   }
 
   /* ---------- Links desativados (Em breve na Google Play) ---------- */

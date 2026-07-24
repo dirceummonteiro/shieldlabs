@@ -1,7 +1,12 @@
-# Arquivos-fonte que não fazem parte do site publicado
-# (as versões renomeadas estão em assets/img/)
+# Arquivos-fonte que nao fazem parte do site publicado
+# (as versoes renomeadas e otimizadas estao em assets/img/)
 aegis_story_1080x1920.png
 og_image_1200x630.png
 logo_aegis_transparente_1024.png
 aegis_post_feed_1080x1080.png
 PROMPT_SITE_SHIELDLABS.md
+
+# Notas internas. O GitHub Pages serve qualquer arquivo commitado na raiz,
+# entao estes nao podem entrar no repositorio.
+VERIFICAR.md
+PENDENCIAS.md
