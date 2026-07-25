@@ -83,7 +83,7 @@
           <p class="doc-org">Shield Labs Desenvolvimento de Software Não Customizável LTDA<br>CNPJ 68.123.924/0001-19</p>
           <div class="doc-dates">
             <span>Vigente desde: 24 de julho de 2026</span>
-            <span>Última atualização: 24 de julho de 2026</span>
+            <span>Última atualização: 25 de julho de 2026</span>
           </div>
         </div>
 
@@ -115,15 +115,15 @@
 
           <div class="doc-callout">
             <ul class="doc-list">
-              <li><strong>Nada sobre a sua navegação sai do seu aparelho.</strong> Nenhum site visitado, nenhuma consulta de DNS, nenhum histórico.</li>
+              <li><strong>Nada sobre a sua navegação é coletado, armazenado ou enviado para a Shield Labs.</strong> Nenhum site visitado, nenhuma consulta de DNS, nenhum histórico. Não temos servidores que recebam esses dados.</li>
               <li><strong>Não existe conta.</strong> Você não se cadastra, não faz login, não informa e-mail nem telefone.</li>
-              <li><strong>O aplicativo funciona offline.</strong> A proteção não depende de internet nem de servidores nossos.</li>
+              <li><strong>O bloqueio funciona offline.</strong> A proteção não depende de internet nem de servidores nossos.</li>
               <li><strong>Não vendemos nem compartilhamos dados seus</strong> — e, na prática, não temos dados seus para vender.</li>
-              <li>A única conexão que o aplicativo faz é <strong>baixar</strong> a lista de sites bloqueados. Ele nunca envia nada sobre você.</li>
+              <li>O aplicativo <strong>baixa</strong> a lista de sites bloqueados e nunca envia nada sobre você. Enquanto a proteção está ativa, os endereços que você acessa são resolvidos por um serviço público de DNS (Cloudflare), como explicamos no item 5.</li>
             </ul>
           </div>
 
-          <p>Se você parar de ler aqui, o resumo acima é verdadeiro. O restante do documento detalha o funcionamento e as poucas exceções — que existem e estão explicadas com honestidade.</p>
+          <p>Se você parar de ler aqui, o resumo acima é verdadeiro. O restante do documento detalha o funcionamento e as exceções — que existem e estão explicadas com honestidade.</p>
         </section>
 
         <section class="doc-section" id="quem-somos">
@@ -154,13 +154,13 @@
         <section class="doc-section" id="nao-coletamos">
           <h2>3. O que NÃO coletamos</h2>
 
-          <p>Não coletamos, não armazenamos, não transmitimos e não temos acesso a:</p>
+          <p>A Shield Labs não coleta, não armazena, não recebe e não tem acesso a:</p>
 
           <ul class="doc-list">
             <li>Consultas de DNS</li>
             <li>Sites visitados ou bloqueados</li>
             <li>Histórico de navegação</li>
-            <li>Seu endereço IP (com uma ressalva descrita no item 5, sobre o provedor de armazenamento)</li>
+            <li>Seu endereço IP</li>
             <li>Sua localização</li>
             <li>Seus contatos</li>
             <li>Suas fotos, arquivos ou mensagens</li>
@@ -169,6 +169,8 @@
           </ul>
 
           <p>O aplicativo <strong>não possui</strong> ferramentas de análise de uso (analytics), telemetria, rastreadores ou kits de publicidade de terceiros.</p>
+
+          <p>Isso descreve o que <strong>nós</strong> recebemos. O item 5 explica, com detalhe, quais conexões o aplicativo faz com serviços de terceiros e o que cada um deles enxerga.</p>
         </section>
 
         <section class="doc-section" id="processamento-local">
@@ -181,11 +183,11 @@
           <ul class="doc-list">
             <li>não é gravado em arquivo</li>
             <li>não é registrado em log</li>
-            <li>não é enviado a lugar nenhum</li>
+            <li>não é enviado para a Shield Labs</li>
             <li>não fica disponível para nós em nenhuma circunstância</li>
           </ul>
 
-          <p>Também ficam guardadas <strong>no seu aparelho</strong>, e somente nele, as suas configurações: se a proteção está ligada, o estado do Modo Compromisso e, caso você use o Guardião local, a verificação do PIN (armazenada de forma cifrada, nunca o PIN em si).</p>
+          <p>Também ficam guardadas <strong>no seu aparelho</strong>, e somente nele, as suas configurações: se a proteção está ligada, o estado do Modo Compromisso e, caso você use o Guardião local, a verificação do PIN (guardada de forma protegida, nunca o PIN em si).</p>
 
           <p>Se você usar o backup do Android, algumas dessas configurações podem ser incluídas no backup da sua conta Google, conforme as regras do próprio Android. Isso é um recurso do sistema operacional, não um envio de dados para a Shield Labs.</p>
         </section>
@@ -195,20 +197,34 @@
 
           <p>Esta é a parte em que preferimos ser específicos, em vez de dizer apenas "não coletamos nada".</p>
 
-          <p>O aplicativo faz <strong>downloads</strong> da lista de sites bloqueados:</p>
+          <h3>5.1 Download da lista de sites bloqueados</h3>
 
           <ul class="doc-list">
             <li>A lista principal é baixada de um serviço público de armazenamento (Cloudflare R2).</li>
             <li>Listas complementares, usadas na cobertura estendida, vêm de fontes públicas de bloqueio mantidas por terceiros.</li>
           </ul>
 
-          <p>Em todos os casos, <strong>o aplicativo apenas baixa</strong>. Ele não envia nenhuma informação sobre você, sobre o seu aparelho ou sobre a sua navegação.</p>
+          <p>Em ambos os casos, <strong>o aplicativo apenas baixa</strong>. Ele não envia nenhuma informação sobre você, sobre o seu aparelho ou sobre a sua navegação.</p>
+
+          <p>Como em qualquer acesso à internet, o servidor que entrega o arquivo enxerga o <strong>endereço IP</strong> de onde partiu a conexão e a data e hora do download. Nós não recebemos nem temos acesso a esses registros.</p>
+
+          <h3>5.2 Resolução de endereços (DNS)</h3>
+
+          <p>Enquanto a proteção está ativa, o Aegis precisa descobrir o endereço dos sites que você acessa.</p>
+
+          <ul class="doc-list">
+            <li><strong>Sites bloqueados param no próprio aparelho.</strong> A consulta é respondida localmente e <strong>nunca sai</strong> do celular.</li>
+            <li><strong>Os demais sites</strong> são consultados em um serviço público de DNS, o <strong>Cloudflare (1.1.1.1)</strong>.</li>
+          </ul>
 
           <div class="doc-callout">
-            <p><strong>A ressalva honesta:</strong> como em qualquer acesso à internet, o servidor que entrega o arquivo enxerga o <strong>endereço IP</strong> de onde partiu a conexão e a data e hora do download. Isso vale para a Cloudflare e para os mantenedores das listas públicas. É uma característica de como a internet funciona, não uma coleta feita por nós — mas você tem o direito de saber, e por isso está escrito aqui. Nós não recebemos nem temos acesso a esses registros.</p>
+            <p>Isso significa que <strong>o Cloudflare enxerga os nomes dos sites do seu tráfego liberado</strong> — da mesma forma que o servidor de DNS da sua operadora os enxergaria com o aplicativo desligado. Essa consulta não é criptografada, como acontece com o DNS comum da maioria das conexões.</p>
+            <p><strong>A Shield Labs não recebe, não registra e não tem acesso a essas consultas.</strong> O Cloudflare não é um servidor nosso, e nada dessas consultas volta para nós. Estamos avaliando passar a usar o resolvedor de DNS da própria rede do aparelho; se isso mudar, esta política será atualizada.</p>
           </div>
 
-          <p>Fora esses downloads, o aplicativo não faz nenhuma outra conexão.</p>
+          <h3>5.3 Nada além disso</h3>
+
+          <p>Fora o download das listas e a resolução de DNS descrita acima, o aplicativo não faz nenhuma outra conexão.</p>
         </section>
 
         <section class="doc-section" id="terceiros">
@@ -225,9 +241,14 @@
               </thead>
               <tbody>
                 <tr>
-                  <td><strong>Cloudflare</strong></td>
+                  <td><strong>Cloudflare (R2)</strong></td>
                   <td>Hospedagem da lista de bloqueio</td>
                   <td>O IP da conexão e a data/hora do download</td>
+                </tr>
+                <tr>
+                  <td><strong>Cloudflare (1.1.1.1)</strong></td>
+                  <td>Resolução de DNS enquanto a proteção está ativa</td>
+                  <td>Os nomes dos sites do seu tráfego liberado</td>
                 </tr>
                 <tr>
                   <td><strong>Fontes públicas de bloqueio</strong></td>
@@ -264,7 +285,7 @@
               <tbody>
                 <tr>
                   <td><strong>VPN (VpnService)</strong></td>
-                  <td>Filtrar localmente, dentro do aparelho, os endereços bloqueados. Não roteia seu tráfego para fora.</td>
+                  <td>Filtrar localmente, dentro do aparelho, os endereços bloqueados. Não roteia sua navegação para servidores nossos.</td>
                 </tr>
                 <tr>
                   <td><strong>Notificações</strong></td>
@@ -276,7 +297,7 @@
                 </tr>
                 <tr>
                   <td><strong>Internet</strong></td>
-                  <td>Baixar a lista de bloqueio.</td>
+                  <td>Baixar a lista de bloqueio e resolver os endereços liberados.</td>
                 </tr>
               </tbody>
             </table>
@@ -305,7 +326,7 @@
 
           <p>O Aegis tem — ou terá — dois recursos diferentes com esse nome. Eles funcionam de forma distinta.</p>
 
-          <p><strong>Guardião local (disponível):</strong> uma pessoa de confiança define um PIN de 6 dígitos no seu próprio aparelho, e esse PIN passa a ser necessário para desligar a proteção. O PIN fica <strong>somente no aparelho</strong>, guardado de forma cifrada. Ele nunca é transmitido e nós não temos acesso a ele.</p>
+          <p><strong>Guardião local (disponível):</strong> uma pessoa de confiança define um PIN de 6 dígitos no seu próprio aparelho, e esse PIN passa a ser necessário para desligar a proteção. O PIN fica <strong>somente no aparelho</strong>, guardado de forma protegida. Ele nunca é transmitido e nós não temos acesso a ele.</p>
 
           <p><strong>Guardião remoto (ainda não disponível):</strong> permitirá que a pessoa de confiança aprove ou recuse pedidos a partir do aparelho dela. Quando existir, trafegará <strong>apenas informações sobre o estado da proteção</strong> — se está ligada, e os pedidos e respostas de autorização. <strong>Nunca</strong> trafegará sites visitados, domínios, consultas de DNS ou histórico de navegação. Esse recurso será opcional e exigirá o seu consentimento explícito.</p>
         </section>
@@ -339,7 +360,7 @@
         <section class="doc-section" id="seguranca">
           <h2>13. Segurança</h2>
 
-          <p>O aplicativo foi construído para que a privacidade não dependa da nossa boa vontade, e sim da arquitetura: como os dados de navegação nunca saem do aparelho, não existe base de dados nossa que possa vazar, ser invadida ou ser vendida.</p>
+          <p>O aplicativo foi construído para que a privacidade não dependa da nossa boa vontade, e sim da arquitetura: como os dados de navegação nunca chegam até nós, não existe base de dados nossa que possa vazar, ser invadida ou ser vendida.</p>
 
           <p>A lista de bloqueio baixada pelo aplicativo é verificada por assinatura criptográfica antes de ser instalada, para impedir que uma lista adulterada seja aplicada.</p>
         </section>

@@ -336,10 +336,26 @@ strong { font-weight: 600; color: var(--silver); }
   body.menu-open .nav-toggle span:nth-child(2) { opacity: 0; }
   body.menu-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
+  /* backdrop-filter turns the header into a containing block for its fixed
+     descendants, which clipped this panel to the 69px header instead of letting it
+     cover the viewport. Drop the filter while the panel is open so `inset: 0`
+     resolves against the viewport again. */
+  body.menu-open .site-header {
+    background: transparent;
+    border-bottom-color: transparent;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+
+  /* The panel lives inside the header, so the brand and the close button need to
+     sit above it to stay reachable. */
+  body.menu-open .brand,
+  body.menu-open .nav-toggle { position: relative; z-index: 2; }
+
   .nav-links {
     position: fixed;
     inset: 0;
-    z-index: -1;
+    z-index: 1;
     display: none;
     flex-direction: column;
     justify-content: center;
