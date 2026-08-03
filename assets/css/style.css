@@ -648,10 +648,6 @@ strong { font-weight: 600; color: var(--silver); }
 
 .plan-featured { border-color: var(--line-firm); }
 
-/* No opacity here: it would composite the card's body text down to roughly 3:1.
-   The "Em breve" tag carries the state instead. */
-.plan-soon { background: transparent; }
-
 .plan-name {
   display: flex;
   align-items: center;
