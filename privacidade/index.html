@@ -320,7 +320,7 @@
         <section class="doc-section" id="permissoes">
           <h2>7. Permissões que o aplicativo solicita</h2>
 
-          <p>O aplicativo declara <strong>oito permissões</strong>, listadas abaixo. Algumas ele pede diretamente; outras vêm junto com bibliotecas oficiais do Google e do Android que ele usa — está indicado em cada linha. A autorização de VPN aparece na tabela por transparência, mas, como a própria linha explica, ela não é uma permissão declarada: é uma autorização que você concede.</p>
+          <p>O aplicativo declara <strong>nove permissões</strong>, listadas abaixo. Algumas ele pede diretamente; outras vêm junto com bibliotecas oficiais do Google e do Android que ele usa — está indicado em cada linha. A autorização de VPN aparece na tabela por transparência, mas, como a própria linha explica, ela não é uma permissão declarada: é uma autorização que você concede.</p>
 
           <div class="table-wrap" tabindex="0" role="region" aria-label="Permissões solicitadas pelo aplicativo">
             <table class="doc-table">
@@ -354,6 +354,10 @@
                 <tr>
                   <td><strong>Compras no aplicativo</strong> (<code>com.android.vending.BILLING</code>)</td>
                   <td>Exigida pela biblioteca de assinaturas do Google Play. Serve para falar com a Play Store; não lê nada do seu aparelho.</td>
+                </tr>
+                <tr>
+                  <td><strong>Receber o aviso do Guardião</strong> (<code>com.google.android.c2dm.permission.RECEIVE</code>)</td>
+                  <td>Vem junto com a biblioteca de notificações do Google. É o que permite este aparelho receber o aviso de que há novidade no vínculo do Guardião — o conteúdo desse aviso está descrito na seção 6. Sem o Guardião, ela não é usada.</td>
                 </tr>
                 <tr>
                   <td><strong>Manter o aparelho acordado</strong> (<code>WAKE_LOCK</code>)</td>

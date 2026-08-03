@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Convite do Aegis</title>
+
+<!--
+  ============================================================================================
+  AEGIS — página de fallback do convite de Guardião.   Publicada em:  https://shieldlabs.app/convite/
+  Acompanha:  https://shieldlabs.app/.well-known/assetlinks.json  (ainda NÃO publicado — depende
+  da impressão digital do Play App Signing, que só existe depois do app criado no Play Console)
+  ============================================================================================
+
+  O TOKEN VEM NO FRAGMENTO (#) DA URL. ISSO NÃO É ESTILO — É O INVARIANTE DO PRODUTO.
+
+  Navegadores NÃO enviam o fragmento ao servidor. Nunca. Ele não aparece na linha de request,
+  não entra no access log, não vai para o Referer e não chega a nenhum proxy ou CDN.
+
+  Hoje o token de convite NUNCA toca a infraestrutura do Aegis: o servidor só conhece um
+  verificador derivado, jamais o segredo de posse. Com o app instalado, o Android intercepta o
+  App Link antes de qualquer request sair do aparelho. Sem o app instalado, o navegador abre
+  ESTA página — e o token continua não saindo do dispositivo, porque está no fragmento.
+
+  >>> Mover o token para o CAMINHO (/convite/<token>) QUEBRA esse invariante. <<<
+  Ele passaria a ser enviado ao host, gravado nos logs do servidor de páginas e no histórico do
+  navegador de quem tocou. Não "arrume" isso. Se algum dia for preciso mudar, é decisão de
+  produto com custo de privacidade, não refactor.
+
+  Consequência para esta página: ela é ESTÁTICA e não tem back-end. Não pode validar o convite,
+  não pode dizer se ele expirou e não pode enviar o token a lugar nenhum. Ela faz duas coisas:
+  explica como instalar, e mostra o token para a pessoa copiar. A leitura do token acontece em
+  JavaScript, no cliente, a partir de location.hash — nada é transmitido.
+
+  NÃO ADICIONAR, nunca: fetch/XHR/beacon/formulário que carregue o token; analytics de qualquer
+  tipo; fonte, script ou imagem de terceiros (um host externo veria o Referer). Sem dependências.
+
+  Esta página fica FORA do sitemap.xml, de propósito: é destino de link privado, não conteúdo
+  público. O noindex acima é a outra metade disso.
+-->
+
+<style>
+  :root { color-scheme: light dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 1.5rem 1.25rem 3rem;
+    font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    max-width: 34rem; margin-inline: auto;
+    color: #14181f; background: #fbfcfe;
+  }
+  @media (prefers-color-scheme: dark) { body { color: #e8ecf2; background: #10141a; } }
+  h1 { font-size: 1.4rem; line-height: 1.3; margin: 0 0 .75rem; }
+  p { margin: 0 0 1rem; }
+  .muted { opacity: .72; font-size: .92rem; }
+  .card {
+    border: 1px solid rgba(128,140,160,.32); border-radius: 12px;
+    padding: 1rem; margin: 1.25rem 0;
+  }
+  code#token {
+    display: block; word-break: break-all; font-size: .82rem; line-height: 1.5;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    background: rgba(128,140,160,.14); border-radius: 8px; padding: .7rem; margin: .6rem 0 .8rem;
+  }
+  button, .btn {
+    display: block; width: 100%; text-align: center; text-decoration: none;
+    padding: .8rem 1rem; border-radius: 10px; font-size: 1rem; font-weight: 600;
+    border: 1px solid rgba(128,140,160,.4); background: transparent; color: inherit;
+    cursor: pointer; margin-top: .5rem;
+  }
+  /* Enquanto o app não está na loja, o botão é um rótulo de estado — não um link. */
+  .btn[aria-disabled="true"] { cursor: default; opacity: .85; font-weight: 600; }
+  ol { padding-left: 1.2rem; }
+  li { margin-bottom: .4rem; }
+  [hidden] { display: none !important; }
+  /* Rodapé: só links de mesma origem. O navegador nunca inclui o fragmento no Referer,
+     então sair daqui para /privacidade ou /termos não expõe o código do convite. */
+  footer {
+    margin-top: 2.5rem; padding-top: 1.25rem;
+    border-top: 1px solid rgba(128,140,160,.28);
+    font-size: .86rem; opacity: .74;
+  }
+  footer p { margin: 0 0 .5rem; }
+  footer a { color: inherit; }
+</style>
+</head>
+<body>
+
+<h1>Você foi convidado para ser Guardião no Aegis</h1>
+
+<p>
+  Ser Guardião é gratuito. Você ajuda alguém de confiança aprovando ações sensíveis no aparelho
+  dele — <strong>sem custo e sem ver a navegação dessa pessoa</strong>.
+</p>
+
+<p class="muted">
+  Esta página aparece quando o Aegis ainda não está instalado neste aparelho. Com o app
+  instalado, tocar no convite passa a abri-lo direto.
+</p>
+
+<noscript>
+  <div class="card">
+    <strong>O código não pode ser exibido aqui</strong>
+    <p class="muted" style="margin:.35rem 0 0">
+      Este aparelho está com o JavaScript desativado, e é ele que mostra o código nesta página.
+      O código está no próprio endereço, depois do símbolo <code>#</code>: copie a partir dali,
+      na barra de endereços. Se preferir, peça à pessoa que enviou o convite para mandar o
+      código em texto.
+    </p>
+  </div>
+</noscript>
+
+<div class="card">
+  <strong>Como aceitar</strong>
+  <ol>
+    <li>Instale o Aegis assim que ele estiver na Google Play.</li>
+    <li>Abra o app e entre em <em>Guardião → Recebi um convite</em>.</li>
+    <li>Cole o código abaixo.</li>
+  </ol>
+  <span class="btn" aria-disabled="true">Em breve na Google Play</span>
+  <p class="muted" style="margin:.8rem 0 0">
+    Ser guardião exige uma conta no app, com e-mail e senha — é ela que liga os dois aparelhos.
+    Se o código não for aceito quando você tentar, peça um convite novo para a pessoa que
+    enviou este.
+  </p>
+</div>
+
+<div class="card" id="tokenCard" hidden>
+  <strong>Seu código de convite</strong>
+  <p class="muted" style="margin:.35rem 0 0">
+    Copie e cole no app. Nesta página, o código fica só neste aparelho — ela não o envia a
+    servidor nenhum.
+  </p>
+  <code id="token"></code>
+  <button id="copy" type="button">Copiar código</button>
+  <p class="muted" id="copied" hidden aria-live="polite" style="margin:.6rem 0 0">Copiado.</p>
+</div>
+
+<div class="card" id="noToken" hidden>
+  <strong>Link incompleto</strong>
+  <p class="muted" style="margin:.35rem 0 0">
+    Este endereço não trouxe o código do convite. Peça para a pessoa enviar o convite outra vez —
+    a mensagem dela também contém o código em texto, logo abaixo do link.
+  </p>
+</div>
+
+<p class="muted">
+  O Aegis bloqueia sites de apostas no próprio aparelho. Sua navegação não é monitorada e não sai
+  do dispositivo.
+</p>
+
+<footer>
+  <p>
+    <a href="../privacidade/">Política de Privacidade</a> ·
+    <a href="../termos/">Termos de Uso</a> ·
+    <a href="mailto:suporte@shieldlabs.app">suporte@shieldlabs.app</a>
+  </p>
+  <p>SHIELD LABS DESENVOLVIMENTO DE SOFTWARE NÃO CUSTOMIZÁVEL LTDA · CNPJ 68.123.924/0001-19 · Brasil</p>
+  <p>O Aegis é um produto para maiores de 18 anos.</p>
+</footer>
+
+<script>
+  // O token vem do FRAGMENTO e é lido AQUI, no cliente. Ele nunca foi enviado ao servidor e nada
+  // neste script o envia: sem fetch, sem XHR, sem beacon, sem formulário. Ver o comentário no topo.
+  (function () {
+    var raw = (location.hash || '').replace(/^#/, '').trim();
+    // Alfabeto do token: base64url. Qualquer outra coisa é tratada como ausente.
+    var token = /^[A-Za-z0-9_-]{8,256}$/.test(raw) ? raw : '';
+
+    var card = document.getElementById('tokenCard');
+    var none = document.getElementById('noToken');
+
+    if (!token) { none.hidden = false; return; }
+
+    document.getElementById('token').textContent = token;
+    card.hidden = false;
+
+    document.getElementById('copy').addEventListener('click', function () {
+      var done = function () { document.getElementById('copied').hidden = false; };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(token).then(done, fallback);
+      } else {
+        fallback();
+      }
+      function fallback() {
+        // Seleciona o texto para a pessoa copiar à mão, sem depender da API de clipboard.
+        var r = document.createRange();
+        r.selectNodeContents(document.getElementById('token'));
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        sel.addRange(r);
+        done();
+      }
+    });
+  })();
+</script>
+
+</body>
+</html>
