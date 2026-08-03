@@ -69,14 +69,6 @@
     window.addEventListener("resize", fecharSeDesktop);
   }
 
-  /* ---------- Links desativados (Em breve na Google Play) ---------- */
-
-  document.querySelectorAll('a[aria-disabled="true"]').forEach(function (link) {
-    link.addEventListener("click", function (e) {
-      e.preventDefault();
-    });
-  });
-
   /* ---------- Revelação das seções (única animação do site) ---------- */
 
   var reduzido = window.matchMedia("(prefers-reduced-motion: reduce)");
