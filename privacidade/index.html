@@ -202,7 +202,7 @@
 
           <p>São <strong>dois caminhos separados</strong>, e vale saber disso porque eles se desligam de formas diferentes. No backup, esses dados vão para a <strong>sua</strong> conta Google. Na transferência, vão direto do aparelho antigo para o novo, sem passar por conta nenhuma. Em nenhum dos dois casos eles chegam à Shield Labs — <strong>não temos acesso ao seu backup</strong>.</p>
 
-          <p>Você pode desativar o backup nas configurações do próprio Android; a transferência entre aparelhos é uma escolha separada, feita na hora de configurar o aparelho novo.</p>
+          <p>O controle dos dois é seu, nas configurações do próprio Android — como tudo no seu aparelho. Os recursos do item 9 existem para acrescentar atrito às decisões que afetam a sua proteção, nunca para impedi-las.</p>
         </section>
 
         <section class="doc-section" id="conexoes-de-rede">
@@ -333,7 +333,7 @@
               <tbody>
                 <tr>
                   <td><strong>VPN</strong></td>
-                  <td>Filtrar localmente, dentro do aparelho, os endereços bloqueados. Não roteia sua navegação para servidores nossos. Tecnicamente isto não é uma permissão que o app declara: é uma autorização que <strong>você</strong> concede no diálogo que o próprio Android mostra, e que você pode revogar quando quiser.</td>
+                  <td>Filtrar localmente, dentro do aparelho, os endereços bloqueados. Não roteia sua navegação para servidores nossos. Tecnicamente isto não é uma permissão que o app declara: é uma autorização que <strong>você</strong> concede no diálogo que o próprio Android mostra, e que você pode revogar quando quiser — os recursos do item 9 existem para acrescentar atrito a essa decisão, não para impedi-la.</td>
                 </tr>
                 <tr>
                   <td><strong>Serviço em primeiro plano</strong> (<code>FOREGROUND_SERVICE</code>, <code>FOREGROUND_SERVICE_SPECIAL_USE</code>)</td>
@@ -341,7 +341,7 @@
                 </tr>
                 <tr>
                   <td><strong>Notificações</strong> (<code>POST_NOTIFICATIONS</code>)</td>
-                  <td>Três coisas: mostrar o aviso de que a proteção está ativa (o Android exige essa notificação enquanto o serviço estiver funcionando), <strong>avisar você caso a proteção termine sem que você tenha pedido</strong> — por exemplo, se outro aplicativo de VPN assumir o lugar do Aegis — e, se você usa o Guardião, avisar que há novidade no vínculo (seção 6).</td>
+                  <td>Três coisas: mostrar o aviso de que a proteção está ativa (o Android exige essa notificação enquanto o serviço estiver funcionando), <strong>avisar você caso a proteção termine sem que você tenha pedido</strong> e, se você usa o Guardião, avisar que há novidade no vínculo (seção 6).</td>
                 </tr>
                 <tr>
                   <td><strong>Internet</strong> (<code>INTERNET</code>)</td>
@@ -410,18 +410,13 @@
 
           <p>Aqui existem duas situações diferentes: o que fica no seu aparelho, e o que fica nos nossos servidores quando você usa o Guardião.</p>
 
-          <p><strong>No seu aparelho.</strong> As configurações e o estado de proteção ficam no aparelho. O que acontece com eles quando você desinstala depende do backup do Android:</p>
+          <p><strong>No seu aparelho.</strong> As configurações e o estado de proteção ficam no aparelho. Ao desinstalar, os dados locais saem dele. O que já tiver ido para o backup do Android permanece na <em>sua</em> conta Google até você removê-lo por lá — o item 4 explica o que entra nesse backup e por quê.</p>
 
-          <ul class="doc-list">
-            <li><strong>Com o backup desligado</strong>, ou se você nunca teve uma conta Google no aparelho, desinstalar remove tudo.</li>
-            <li><strong>Com o backup ligado</strong>, o estado do Compromisso e da Trava por PIN <strong>pode voltar quando você reinstala</strong> — e é exatamente isso que pedimos ao sistema, pelo motivo explicado no item 4: desinstalar não deve ser um atalho para burlar a proteção que você escolheu.</li>
-          </ul>
-
-          <p>Sobre esse "pode", queremos ser precisos em vez de convenientes: <strong>quem faz a cópia e a restauração é o Android, não o Aegis.</strong> O sistema copia de tempos em tempos, quando o aparelho está parado e carregando, e só consegue restaurar o que já tinha sido copiado antes. Se você desinstalar antes de a primeira cópia acontecer, não há o que voltar. Não temos como garantir que aconteça, e não vamos dizer que temos.</p>
+          <p>Queremos ser precisos em vez de convenientes sobre o que isso significa na prática: <strong>quem faz a cópia e a restauração é o Android, não o Aegis.</strong> É o sistema que decide quando copiar, e nós não temos como interferir nisso. Por isso não prometemos que o estado de proteção volte ao reinstalar: não temos como garantir que aconteça, e não vamos dizer que temos.</p>
 
           <p>A transferência de aparelho para aparelho é um caminho <strong>separado</strong>: ela não depende de o backup na nuvem estar ligado, e é uma escolha feita na hora de configurar o aparelho novo.</p>
 
-          <p>Para apagar também o que foi para o backup, é preciso removê-lo pela sua conta Google. Nada disso passa pela Shield Labs: <strong>não temos acesso ao seu backup</strong>.</p>
+          <p>Nada disso passa pela Shield Labs: <strong>não temos acesso ao seu backup</strong>.</p>
 
           <p><strong>Nos nossos servidores.</strong> Duas coisas podem existir, e nada além delas:</p>
 
