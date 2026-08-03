@@ -116,10 +116,10 @@
           <div class="doc-callout">
             <ul class="doc-list">
               <li><strong>Nada sobre a sua navegação é coletado, armazenado ou enviado para a Shield Labs.</strong> Nenhum site visitado, nenhuma consulta de DNS, nenhum histórico. Não existe servidor nosso que receba esses dados.</li>
-              <li><strong>Para se proteger, não existe conta.</strong> Você não se cadastra, não faz login, não informa e-mail nem telefone: instala, assina pela Google Play e pronto. Conta (por e-mail, com confirmação) existe <strong>apenas no recurso Guardião</strong>, porque ele conecta duas pessoas em dois aparelhos — os itens 5, 6 e 9 explicam o que ela envolve.</li>
+              <li><strong>Para se proteger, não existe conta.</strong> Você não se cadastra, não faz login, não informa e-mail nem telefone: instala, assina pela Google Play e pronto. Conta (e-mail e senha, confirmada por e-mail) existe <strong>apenas no recurso Guardião</strong>, porque ele conecta duas pessoas em dois aparelhos — os itens 5, 6 e 9 explicam o que ela envolve.</li>
               <li><strong>O bloqueio funciona offline.</strong> A proteção não depende de internet nem de servidores nossos.</li>
               <li><strong>Não vendemos nem compartilhamos dados seus.</strong> O pouco que existe nos nossos servidores — a confirmação da sua assinatura e, se você usar o recurso, a conta do Guardião — serve só para o aplicativo funcionar.</li>
-              <li>O aplicativo <strong>baixa</strong> listas de sites bloqueados — é só download: nada sobre você sai nessa conexão. Enquanto a proteção está ativa, os endereços que você acessa são resolvidos por um serviço público de DNS (Cloudflare), como explicamos no item 5.</li>
+              <li>O aplicativo <strong>baixa</strong> listas de sites bloqueados — é só download: nada sobre você sai nessa conexão. Enquanto a proteção está ativa, os endereços dos sites que <em>não</em> são bloqueados são resolvidos por um serviço público de DNS (Cloudflare), como explicamos no item 5.</li>
             </ul>
           </div>
 
@@ -169,7 +169,7 @@
 
           <p><strong>Nós não integramos</strong> nenhuma ferramenta de análise de uso (analytics), telemetria, rastreador ou kit de publicidade. Sendo exatos, porque a diferença importa: a biblioteca de pagamentos do Google Play, que o aplicativo usa para as assinaturas, traz junto componentes do próprio Google — inclusive um de envio de eventos dele. Não somos nós que os usamos, nada deles chega até a Shield Labs, e o que o Google faz com eles segue a política do Google.</p>
 
-          <p>A lista acima descreve o uso do Aegis para se proteger — nos planos Básico e Premium, é tudo o que existe: sem conta e sem cadastro. Duas exceções pontuais, explicadas nos itens 5, 6 e 8: ao validar uma assinatura, o nosso servidor recebe o comprovante de compra (e vê o IP dessa conexão, como qualquer servidor vê); e, se você usa o recurso Guardião, ele passa a ver também o e-mail da conta e o IP das conexões do vínculo. Localização, mensagens e histórico de navegação não são coletados em caso nenhum. O item 5 explica, com detalhe, quais conexões o aplicativo faz e o que cada serviço enxerga.</p>
+          <p>A lista acima descreve o uso do Aegis para se proteger — nos planos Básico e Premium, é tudo o que existe: sem conta e sem cadastro. Duas exceções pontuais, explicadas nos itens 5, 6, 8 e 9: ao validar uma assinatura, o nosso servidor recebe o comprovante de compra (e vê o IP dessa conexão, como qualquer servidor vê); e, se você usa o recurso Guardião, ele passa a ver também o e-mail da conta e o IP das conexões do vínculo. Localização, mensagens e histórico de navegação não são coletados em caso nenhum. O item 5 explica, com detalhe, quais conexões o aplicativo faz e o que cada serviço enxerga.</p>
         </section>
 
         <section class="doc-section" id="processamento-local">
@@ -198,7 +198,7 @@
 
           <p>A razão é direta: <strong>para que reinstalar o aplicativo, ou trocar de aparelho, não vire um atalho para burlar a proteção que você mesmo escolheu.</strong> Se o Compromisso voltasse zerado a cada reinstalação, ele não seria compromisso nenhum.</p>
 
-          <p>Ficam <strong>de fora</strong> do backup, também de propósito: as chaves de segurança do aparelho, que nunca devem migrar entre aparelhos, e o estado da assinatura, que é restaurado pelo Google Play e não por backup.</p>
+          <p>Ficam <strong>de fora</strong> do backup, também de propósito: as chaves de segurança do aparelho, que nunca devem migrar entre aparelhos, e o estado da assinatura, que é restaurado pela Google Play e não por backup.</p>
 
           <p>São <strong>dois caminhos separados</strong>, e vale saber disso porque eles se desligam de formas diferentes. No backup, esses dados vão para a <strong>sua</strong> conta Google. Na transferência, vão direto do aparelho antigo para o novo, sem passar por conta nenhuma. Em nenhum dos dois casos eles chegam à Shield Labs — <strong>não temos acesso ao seu backup</strong>.</p>
 
@@ -217,7 +217,7 @@
             <li><strong>Listas complementares</strong> (nos planos de cobertura ampla — Premium e Guardião) — duas listas públicas de domínios de apostas, mantidas por terceiros (HaGeZi e Block List Project) e <strong>hospedadas no GitHub</strong>. Também não enviam nada sobre você.</li>
             <li><strong>Conta e Guardião</strong> (apenas se você usar o recurso Guardião) — o app conversa com o nosso servidor para autenticar, ler o estado do vínculo e registrar aprovações. Trafegam o <strong>e-mail e a senha</strong> que você usa para criar a conta e entrar, e <strong>metadados de conta e de proteção</strong>: identificadores opacos, papéis, status, horários. <strong>Nunca</strong> trafega o que você acessou: nenhuma consulta de DNS, nenhum domínio, nenhum histórico.</li>
             <li><strong>Aviso de novidade para o Guardião</strong> — para que o Guardião saiba de um pedido em minutos e não na próxima vez que abrir o app, o Aegis usa o serviço de notificações do Google (Firebase Cloud Messaging). Detalhes na seção 6.</li>
-            <li><strong>Validação da assinatura</strong> (em qualquer plano pago) — ao confirmar a compra, o aplicativo envia ao nosso servidor o comprovante emitido pelo Google Play, para perguntar ao Google se a assinatura está ativa. O servidor guarda apenas uma impressão digital do comprovante — nunca dados de pagamento, nunca nada sobre a sua navegação. Detalhes na seção 8.</li>
+            <li><strong>Validação da assinatura</strong> (em qualquer plano pago) — ao confirmar a compra, o aplicativo envia ao nosso servidor o comprovante emitido pela Google Play, para perguntar ao Google se a assinatura está ativa. O servidor guarda apenas uma impressão digital do comprovante — nunca dados de pagamento, nunca nada sobre a sua navegação. Detalhes na seção 8.</li>
           </ol>
 
           <p><strong>O que isso significa na prática:</strong> se você usa o Aegis sem o recurso Guardião, das conexões acima o app faz a (1), a (5) quando você assina e — nos planos de cobertura ampla — a (2). Ele não fala com o serviço de notificações do Google e não registra identificador nenhum nele. Fora essas, o que sai do aparelho pelo aplicativo enquanto a proteção está ativa são as <strong>consultas de DNS dos sites liberados</strong>, que vão para o Cloudflare — está explicado logo abaixo, em 5.2, e é a conexão mais relevante para a sua privacidade em todo este documento. Nada além disso.</p>
@@ -320,7 +320,7 @@
         <section class="doc-section" id="permissoes">
           <h2>7. Permissões que o aplicativo solicita</h2>
 
-          <p>Esta é a lista completa do que a versão publicada declara. Algumas dessas permissões o aplicativo pede diretamente; outras vêm junto com bibliotecas oficiais do Google e do Android que ele usa — está indicado em cada linha.</p>
+          <p>O aplicativo declara <strong>oito permissões</strong>, listadas abaixo. Algumas ele pede diretamente; outras vêm junto com bibliotecas oficiais do Google e do Android que ele usa — está indicado em cada linha. A autorização de VPN aparece na tabela por transparência, mas, como a própria linha explica, ela não é uma permissão declarada: é uma autorização que você concede.</p>
 
           <div class="table-wrap" tabindex="0" role="region" aria-label="Permissões solicitadas pelo aplicativo">
             <table class="doc-table">
@@ -373,14 +373,15 @@
         <section class="doc-section" id="assinaturas">
           <h2>8. Assinaturas</h2>
 
-          <p>As assinaturas são contratadas e processadas <strong>pelo Google Play</strong>. Isso significa que:</p>
+          <p>As assinaturas são contratadas e processadas <strong>pela Google Play</strong>. Isso significa que:</p>
 
           <ul class="doc-list">
             <li>Os dados de pagamento são tratados pelo Google, conforme a política dele.</li>
             <li>A Shield Labs <strong>não recebe e não armazena</strong> dados de cartão ou meios de pagamento.</li>
-            <li>Para confirmar que a compra é válida, o aplicativo envia ao nosso servidor o comprovante de compra emitido pelo Google Play. Ele serve para perguntar ao Google se a assinatura está ativa, e o servidor guarda dele apenas uma impressão digital — nunca dados de pagamento.</li>
+            <li>Para confirmar que a compra é válida, o aplicativo envia ao nosso servidor o comprovante de compra emitido pela Google Play. Ele serve para perguntar ao Google se a assinatura está ativa, e o servidor guarda dele apenas uma impressão digital — nunca dados de pagamento.</li>
             <li>Fora isso, recebemos apenas a informação de que a assinatura está ativa, para liberar os recursos do plano.</li>
-            <li>A cobrança, a renovação e o cancelamento são feitos diretamente pela sua conta do Google Play.</li>
+            <li>A cobrança, a renovação e o cancelamento são feitos diretamente pela sua conta da Google Play.</li>
+            <li>A proteção depende da assinatura: quando ela termina, o Compromisso em andamento termina junto, e você é avisado com antecedência dentro do aplicativo — assim como o seu guardião, se houver um. Os <a href="../termos/#assinaturas">Termos de Uso</a> detalham isso no item 8.</li>
           </ul>
         </section>
 
