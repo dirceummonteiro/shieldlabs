@@ -18,10 +18,16 @@
   Navegadores NÃO enviam o fragmento ao servidor. Nunca. Ele não aparece na linha de request,
   não entra no access log, não vai para o Referer e não chega a nenhum proxy ou CDN.
 
-  Hoje o token de convite NUNCA toca a infraestrutura do Aegis: o servidor só conhece um
-  verificador derivado, jamais o segredo de posse. Com o app instalado, o Android intercepta o
-  App Link antes de qualquer request sair do aparelho. Sem o app instalado, o navegador abre
-  ESTA página — e o token continua não saindo do dispositivo, porque está no fragmento.
+  SEJA EXATO SOBRE O QUE O SERVIDOR TEM. O código do convite tem duas metades. Uma é um número
+  cunhado pelo próprio servidor, guardado por ele e devolvido ao aparelho — essa metade ele tem,
+  e não adianta escrever o contrário. A outra é o SEGREDO, e é dele que se trata a promessa:
+  o servidor ARMAZENA apenas um resumo do segredo, nunca o segredo em si. "Armazena" é o verbo
+  exato; "conhece" não é — no aceite o segredo trafega, o servidor o resume e o descarta.
+
+  O que esta página garante é outra coisa, e é o invariante: o navegador NUNCA transmite o
+  pedaço da URL depois do #. Com o app instalado, o Android intercepta o App Link antes de
+  qualquer request sair do aparelho. Sem o app instalado, o navegador abre ESTA página — e o
+  código continua não saindo do dispositivo, porque está no fragmento.
 
   >>> Mover o token para o CAMINHO (/convite/<token>) QUEBRA esse invariante. <<<
   Ele passaria a ser enviado ao host, gravado nos logs do servidor de páginas e no histórico do
