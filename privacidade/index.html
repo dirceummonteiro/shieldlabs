@@ -306,7 +306,7 @@
 
           <p><strong>O que a mensagem carrega: nada.</strong> Ela diz literalmente "pode haver algo novo". Não vai nela quem pediu, o que foi pedido, nem qualquer identificador do vínculo. Ao receber esse aviso, o app consulta o nosso servidor por conta própria, autenticado, e só então mostra algo — e o que ele mostra é sempre genérico ("você tem uma novidade"), nunca uma decisão vinda da mensagem.</p>
 
-          <p><strong>O que o Google fica sabendo — e isto é o ponto que não queremos minimizar.</strong> Ainda que a mensagem não tenha conteúdo, o Google necessariamente registra: um identificador do aplicativo instalado neste aparelho, o endereço IP, e <strong>o horário de cada aviso enviado</strong>. Como o Aegis só envia aviso quando algo acontece no vínculo de Guardião, esse registro de horários é, na prática, <strong>um rastro de quando houve atividade</strong> no seu vínculo — num aplicativo cujo propósito é proteção contra apostas. O conteúdo não vaza; o <em>momento</em> sim. Para reduzir isso, o envio <strong>será feito</strong> com atraso e agrupamento deliberados, de alguns minutos, de modo que o horário do aviso não corresponda exatamente ao horário do pedido. <strong>Esse atraso ainda não existe</strong> — ele tem que ficar pronto antes de o recurso ser lançado.</p>
+          <p><strong>O que o Google fica sabendo — e isto é o ponto que não queremos minimizar.</strong> Ainda que a mensagem não tenha conteúdo, o Google necessariamente registra: um identificador do aplicativo instalado neste aparelho, o endereço IP, e <strong>o horário de cada aviso enviado</strong>. Como o Aegis só envia aviso quando algo acontece no vínculo de Guardião, esse registro de horários é, na prática, <strong>um rastro de quando houve atividade</strong> no seu vínculo — num aplicativo cujo propósito é proteção contra apostas. O conteúdo não vaza; o <em>momento</em> sim. Para reduzir isso, <strong>o envio é feito com atraso e agrupamento deliberados</strong>: cada aviso sai entre um e quatro minutos depois do que o motivou, com o intervalo variando a cada vez, e vários eventos seguidos viram um aviso só. O horário que o Google registra, portanto, não é o horário do que aconteceu no seu vínculo.</p>
 
           <p><strong>Quando isto se aplica a você:</strong> só se você criar uma conta <strong>e</strong> um vínculo de Guardião ativo. Sem vínculo ativo, o Aegis não inicializa esse serviço e não registra identificador nenhum. Ao encerrar o vínculo, o registro é revogado no nosso servidor e o código de registro é apagado do aparelho. Sendo exatos: <strong>um identificador da instalação do aplicativo continua existindo</strong>, no aparelho e no Google, enquanto o aplicativo estiver instalado — ele é criado pela própria biblioteca do Google e não é nosso para apagar.</p>
 
@@ -386,7 +386,7 @@
             <li>Para que a assinatura fique ligada a alguém, o aplicativo cria no nosso servidor uma <strong>identidade anônima</strong>. Ela não tem e-mail, nome, telefone nem qualquer dado pessoal, e você não precisa digitar nada: é criada sozinha, no momento da compra, e existe apenas para dizer que aquela assinatura é sua. Não é conta e não serve para entrar em lugar nenhum — conta com e-mail e senha só existe no Guardião (item 9).</li>
             <li>Fora isso, recebemos apenas a informação de que a assinatura está ativa, para liberar os recursos do plano.</li>
             <li>A cobrança, a renovação e o cancelamento são feitos diretamente pela sua conta da Google Play.</li>
-            <li>A proteção depende da assinatura: quando ela termina, o Compromisso em andamento termina junto, e você é avisado com antecedência dentro do aplicativo — assim como o seu guardião, se houver um. Os <a href="../termos/#assinaturas">Termos de Uso</a> detalham isso no item 8.</li>
+            <li>A proteção depende da assinatura: quando ela termina, o Compromisso em andamento termina junto. Você é avisado dentro do aplicativo quando o teste de 7 dias está para acabar — um dia antes e no próprio dia — e, quando uma assinatura termina, você e o seu guardião são avisados depois que isso acontece. Os <a href="../termos/#assinaturas">Termos de Uso</a> detalham isso no item 8.</li>
           </ul>
         </section>
 
@@ -508,6 +508,7 @@
           <li><a href="../aegis/">Aegis</a></li>
           <li><a href="./" aria-current="page">Privacidade</a></li>
           <li><a href="../termos/">Termos de uso</a></li>
+          <li><a href="../excluir-conta/">Excluir conta</a></li>
           <li><a href="../suporte/">Suporte</a></li>
         </ul>
       </div>
