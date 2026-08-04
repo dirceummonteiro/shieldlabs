@@ -129,7 +129,7 @@
             <li>O bloqueio acontece por meio de um <strong>filtro de VPN local</strong>, dentro do seu aparelho.</li>
             <li>O Aegis <strong>não é um proxy</strong> e não roteia o seu tráfego por servidores da Shield Labs.</li>
             <li>O aplicativo <strong>não descriptografa nada</strong>: não há interceptação de TLS nem instalação de certificado.</li>
-            <li>Para se proteger, não é preciso criar conta: você instala, assina pela Google Play e a proteção passa a valer, inclusive offline. Conta (e-mail e senha, confirmada por e-mail) existe apenas no recurso <strong>Guardião</strong>, descrito no item 6.</li>
+            <li>Para se proteger, você não se cadastra: instala, assina pela Google Play e a proteção passa a valer, inclusive offline. Ao assinar, o aplicativo cria no nosso servidor uma identidade anônima, sem nenhum dado pessoal, apenas para ligar a compra à assinatura — o item 8 da <a href="../privacidade/">Política de Privacidade</a> explica. Conta com e-mail e senha existe apenas no recurso <strong>Guardião</strong>, descrito no item 6.</li>
             <li>Nomes de domínio são lidos de forma transitória, na memória do aparelho, apenas para decidir bloquear ou permitir, e descartados em seguida. Não são registrados em log, não são armazenados e <strong>não são enviados para a Shield Labs</strong>. O que sai do aparelho está no item 7.</li>
             <li>As configurações que ficam no aparelho são as suas preferências de proteção e o estado dos recursos: proteção ligada ou desligada, o <strong>Compromisso</strong>, a <strong>Trava por PIN</strong> (apenas a verificação derivada do PIN, nunca o PIN em si) e os pedidos e convites do Guardião.</li>
           </ul>
@@ -169,7 +169,7 @@
           <p>O que sai do aparelho está enumerado no item 5 da <a href="../privacidade/">Política de Privacidade</a>. Três pontos merecem destaque:</p>
           <ul class="doc-list">
             <li>Enquanto a proteção está ligada, os nomes dos sites <em>não</em> bloqueados são resolvidos por um serviço público de DNS (Cloudflare), que passa a enxergá-los. Esses nomes não passam por servidores nossos nem são associados à sua conta.</li>
-            <li>Ao assinar, o comprovante de compra emitido pela Google Play é enviado ao nosso servidor, que guarda apenas uma impressão digital desse comprovante.</li>
+            <li>Ao assinar, o comprovante de compra emitido pela Google Play é enviado ao nosso servidor, que guarda apenas uma impressão digital desse comprovante e cria a identidade anônima do item 3.</li>
             <li>Se você usar o Guardião, o vínculo trafega os dados descritos no item 9 da política — nunca a sua navegação.</li>
           </ul>
           <p>O tratamento de dados está descrito em detalhe na <a href="../privacidade/">Política de Privacidade</a>, que integra estes termos.</p>
@@ -183,7 +183,7 @@
             <li>Uma assinatura solicitada e não concluída <strong>expira em 24 horas</strong>. Depois disso, é preciso começar de novo — nada é cobrado por um pedido expirado.</li>
             <li>A cobrança, a renovação, o cancelamento e os pedidos de reembolso seguem as regras e os prazos da Google Play, aplicados à conta Google em que a assinatura foi feita.</li>
             <li>O cancelamento é feito nas configurações de assinaturas da sua conta Google. Cancelar interrompe as renovações seguintes. O efeito sobre o período já pago segue as regras da Google Play vigentes no momento do cancelamento.</li>
-            <li>Ao confirmar a compra, o aplicativo envia ao nosso servidor o comprovante emitido pela Google Play, para verificar se a assinatura está ativa; guardamos apenas uma impressão digital desse comprovante, que é excluída em até 60 dias após o fim da assinatura. <strong>Nunca vemos dados de cartão ou de pagamento.</strong></li>
+            <li>Ao confirmar a compra, o aplicativo envia ao nosso servidor o comprovante emitido pela Google Play, para verificar se a assinatura está ativa, e cria ali a identidade anônima descrita no item 3. Do comprovante guardamos apenas uma impressão digital; ela e a identidade são excluídas em até 60 dias após o fim da assinatura. <strong>Nunca vemos dados de cartão ou de pagamento.</strong></li>
             <li>Desinstalar o aplicativo não cancela a assinatura. O cancelamento precisa ser feito na loja.</li>
           </ul>
           <p>O tratamento de dados pelo Google é regido pela <a href="https://policies.google.com/privacy" rel="noopener">política de privacidade do Google</a>.</p>
@@ -229,7 +229,7 @@
 
         <section class="doc-section" id="encerramento">
           <h2>12. Encerramento do uso e dados locais</h2>
-          <p>Você pode encerrar o uso quando quiser, desinstalando o aplicativo. Quem usa o Aegis sem o Guardião não tem conta a encerrar; a impressão digital do comprovante da assinatura é excluída em até 60 dias após o fim dela. Se você usa o Guardião, pode pedir o encerramento da conta pelo <a href="mailto:suporte@shieldlabs.app">suporte@shieldlabs.app</a>: os dados dela são excluídos em até 60 dias, conforme o item 11 da <a href="../privacidade/">Política de Privacidade</a>. A única exceção são os registros de acesso à conta do Guardião, que a lei brasileira obriga a guardar por 6 meses.</p>
+          <p>Você pode encerrar o uso quando quiser, desinstalando o aplicativo. Quem usa o Aegis sem o Guardião não tem conta a encerrar; a identidade anônima e a impressão digital do comprovante da assinatura são excluídas em até 60 dias após o fim dela. Se você usa o Guardião, pode pedir o encerramento da conta pelo <a href="mailto:suporte@shieldlabs.app">suporte@shieldlabs.app</a>: os dados dela são excluídos em até 60 dias, conforme o item 11 da <a href="../privacidade/">Política de Privacidade</a>. A única exceção são os registros de acesso à conta do Guardião, que a lei brasileira obriga a guardar por 6 meses.</p>
           <p>As configurações locais — as preferências de proteção, o Compromisso, a verificação da Trava por PIN e os pedidos e convites do Guardião — ficam no seu aparelho. O Aegis inclui deliberadamente parte delas no backup do Android e na transferência entre aparelhos, para que reinstalar ou trocar de celular não se torne um atalho para burlar a proteção que você mesmo escolheu; o item 4 da política explica o que entra nesse backup e o que fica de fora. Ele vai para a <em>sua</em> conta Google — nós não temos acesso a ele. Quem faz a cópia e a restauração é o Android, não o Aegis: o item 11 da política explica por que isso não é uma garantia.</p>
           <p>Se houver assinatura ativa, vale o que está no item 8: o cancelamento é feito na Google Play.</p>
           <p>Da nossa parte, podemos suspender ou encerrar a licença de uso em caso de descumprimento grave do item 10, e podemos descontinuar o aplicativo ou algum de seus recursos. Nesse caso, avisaremos com antecedência razoável dentro do aplicativo e nesta página, e nenhuma assinatura será cobrada por um serviço que deixou de existir.</p>
