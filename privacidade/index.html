@@ -118,7 +118,7 @@
               <li><strong>Nada sobre a sua navegação é coletado, armazenado ou enviado para a Shield Labs.</strong> Nenhum site visitado, nenhuma consulta de DNS, nenhum histórico. Não existe servidor nosso que receba esses dados.</li>
               <li><strong>Para se proteger, você não se cadastra.</strong> Não faz login, não informa e-mail nem telefone: instala, assina pela Google Play e pronto. Ao assinar, o aplicativo cria no nosso servidor uma <strong>identidade anônima</strong> — sem e-mail, sem senha, sem nenhum dado pessoal —, que serve só para ligar a sua compra à assinatura. Conta com e-mail e senha existe <strong>apenas no recurso Guardião</strong>, porque ele conecta duas pessoas em dois aparelhos — os itens 5, 6, 9 e 11 explicam o que ela envolve.</li>
               <li><strong>O bloqueio funciona offline.</strong> A proteção não depende de internet nem de servidores nossos.</li>
-              <li><strong>Não vendemos nem compartilhamos dados seus.</strong> O pouco que existe nos nossos servidores — a identidade anônima da assinatura, a impressão digital do comprovante e, se você usar o recurso, a conta do Guardião — serve só para o aplicativo funcionar, com uma exceção que a lei impõe e o item 11 explica: os registros de acesso à conta.</li>
+              <li><strong>Não vendemos nem compartilhamos dados seus.</strong> O pouco que existe nos nossos servidores — a identidade anônima da assinatura, a impressão digital do comprovante e, se você usar o recurso, a conta do Guardião — serve só para o aplicativo funcionar. Não guardamos registro de acesso de ninguém — o item 11 explica o que a infraestrutura registra e por que isso não passa por nós.</li>
               <li>O aplicativo <strong>baixa</strong> listas de sites bloqueados — é só download: nada sobre você sai nessa conexão. Enquanto a proteção está ativa, os endereços dos sites que <em>não</em> são bloqueados são resolvidos por um serviço público de DNS (Cloudflare), como explicamos no item 5.</li>
             </ul>
           </div>
@@ -169,7 +169,7 @@
 
           <p><strong>Nós não integramos</strong> nenhuma ferramenta de análise de uso (analytics), telemetria, rastreador ou kit de publicidade. Sendo exatos, porque a diferença importa: a biblioteca de pagamentos do Google Play, que o aplicativo usa para as assinaturas, traz junto componentes do próprio Google — inclusive um de envio de eventos dele. Não somos nós que os usamos, nada deles chega até a Shield Labs, e o que o Google faz com eles segue a política do Google.</p>
 
-          <p>A lista acima descreve o uso do Aegis para se proteger — nos planos Básico e Premium você não se cadastra e não nos dá dado pessoal nenhum. Três exceções pontuais, explicadas nos itens 5, 6, 8, 9 e 11: ao validar uma assinatura, o nosso servidor recebe o comprovante de compra e cria a identidade anônima que o item 8 descreve (e vê o IP dessa conexão, como qualquer servidor vê); se você usa o recurso Guardião, ele passa a ver também o e-mail da conta e o IP das conexões do vínculo; e, ainda no Guardião, os registros de acesso à conta — data, hora e IP de cada entrada — são guardados por 6 meses, porque a lei brasileira exige (item 11). Localização, mensagens e histórico de navegação não são coletados em caso nenhum. O item 5 explica, com detalhe, quais conexões o aplicativo faz e o que cada serviço enxerga.</p>
+          <p>A lista acima descreve o uso do Aegis para se proteger — nos planos Básico e Premium você não se cadastra e não nos dá dado pessoal nenhum. Três exceções pontuais, explicadas nos itens 5, 6, 8, 9 e 11: ao validar uma assinatura, o nosso servidor recebe o comprovante de compra e cria a identidade anônima que o item 8 descreve; se você usa o recurso Guardião, ele passa a ver também o e-mail da conta e os metadados do vínculo; e, em qualquer conexão a esse servidor, o endereço IP fica registrado pela infraestrutura que o hospeda, como em qualquer serviço na internet — nós não guardamos esses registros nem os usamos (item 11). Localização, mensagens e histórico de navegação não são coletados em caso nenhum. O item 5 explica, com detalhe, quais conexões o aplicativo faz e o que cada serviço enxerga.</p>
         </section>
 
         <section class="doc-section" id="processamento-local">
@@ -287,7 +287,7 @@
                 <tr>
                   <td><strong>Supabase</strong> <em>(hospeda o nosso servidor)</em></td>
                   <td>Validação da assinatura (qualquer plano pago) e, se você usar o Guardião, o vínculo: autenticação, estado, aprovações</td>
-                  <td>O comprovante de compra na validação — do qual guarda apenas a impressão digital —, a identidade anônima da assinatura e o IP da conexão; com o Guardião, também a conta (o e-mail e, na autenticação, a senha), os metadados descritos no item 5 (3) e os registros de acesso, guardados por 6 meses por exigência legal (item 11)</td>
+                  <td>O comprovante de compra na validação — do qual guarda apenas a impressão digital —, a identidade anônima da assinatura e os dados técnicos da conexão, inclusive o IP (item 11); com o Guardião, também a conta (o e-mail e, na autenticação, a senha) e os metadados descritos no item 5 (3)</td>
                 </tr>
                 <tr>
                   <td><strong>Google (Firebase Cloud Messaging)</strong> <em>(apenas se você usar o Guardião — nos dois lados do vínculo)</em></td>
@@ -399,7 +399,7 @@
 
           <p><strong>Guardião:</strong> outra pessoa, em quem você confia, acompanha a sua proteção do aparelho dela e aprova ou recusa as ações sensíveis. Usar o recurso exige <strong>uma conta com e-mail e senha, confirmada por e-mail</strong> — para você e para o guardião —, porque ele conecta duas pessoas em dois aparelhos. O recurso é opcional e existe com o seu consentimento explícito; o vínculo pode ser encerrado por você, com aviso ao guardião e liberação em 72 horas — que o guardião pode antecipar.</p>
 
-          <p><strong>O que existe no nosso servidor quando você usa o Guardião:</strong> o e-mail da conta; o vínculo entre protegido e guardião; os pedidos e as respostas (aprovar ou negar); o registro de notificação do aparelho (o token do serviço de push do Google/Firebase), para os avisos chegarem; os registros de acesso à conta — data, hora e IP de cada entrada —, que a lei manda guardar por 6 meses (item 11); e, como para qualquer assinante, a identidade anônima e a impressão digital do comprovante da assinatura (item 8). <strong>Nada de localização, nada de mensagens, nada de histórico de sites</strong> — o que você acessa nunca faz parte da conta.</p>
+          <p><strong>O que existe no nosso servidor quando você usa o Guardião:</strong> o e-mail da conta; o vínculo entre protegido e guardião; os pedidos e as respostas (aprovar ou negar); o registro de notificação do aparelho (o token do serviço de push do Google/Firebase), para os avisos chegarem; e, como para qualquer assinante, a identidade anônima e a impressão digital do comprovante da assinatura (item 8). Não guardamos registro de acesso: nem de quem usa o Guardião, nem de ninguém — o item 11 explica. <strong>Nada de localização, nada de mensagens, nada de histórico de sites</strong> — o que você acessa nunca faz parte da conta.</p>
 
           <p><strong>Ter um Guardião envolve o serviço de notificações do Google.</strong> É o que permite avisar o Guardião em minutos com o app fechado. Isso vale para os dois lados do vínculo, não carrega nada sobre o que você acessa, e vale só enquanto o vínculo estiver ativo — ver seção 6.</p>
         </section>
@@ -423,13 +423,18 @@
 
           <p>Nada disso passa pela Shield Labs: <strong>não temos acesso ao seu backup</strong>.</p>
 
-          <p><strong>Nos nossos servidores.</strong> Três situações podem existir, e nada além delas:</p>
+          <p><strong>Nos nossos servidores.</strong> Duas situações podem existir, e nada além delas:</p>
 
           <ul class="doc-list">
-            <li><strong>A identidade anônima da assinatura e a impressão digital do comprovante de compra</strong>, se você assina um plano (item 8). A identidade não contém e-mail, nome nem qualquer dado pessoal — serve só para ligar a compra à assinatura. As duas existem enquanto a assinatura estiver ativa e são <strong>excluídas em até 60 dias</strong> após o encerramento.</li>
+            <li><strong>A identidade anônima da assinatura e a impressão digital do comprovante de compra</strong>, se você assina um plano (item 8). A identidade não contém e-mail, nome nem qualquer dado pessoal — serve só para ligar a compra à assinatura, e dela fica registrada apenas a data em que foi criada. As duas existem enquanto a assinatura estiver ativa e são <strong>excluídas em até 60 dias</strong> após o encerramento.</li>
             <li><strong>A conta do Guardião</strong>, se você usa o recurso. Enquanto a conta existir, existem o e-mail, o vínculo, os pedidos e respostas e o registro de notificação (item 9). Quando a conta é encerrada, esses dados são <strong>excluídos em até 60 dias</strong>. Para pedir o encerramento e a exclusão, escreva para <a href="mailto:suporte@shieldlabs.app">suporte@shieldlabs.app</a>.</li>
-            <li><strong>Os registros de acesso à conta</strong> — a data, a hora e o endereço IP de cada entrada —, também só se você usa o Guardião. Eles são guardados por <strong>6 meses</strong> e depois excluídos, salvo se a lei ou uma ordem judicial exigir prazo maior. Esta é a única exceção ao prazo de 60 dias, e não é escolha nossa: o Marco Civil da Internet (Lei nº 12.965/2014, art. 15) obriga a guardá-los por esse período. Eles existem para atender a lei e só saem daqui mediante ordem judicial — não são usados para mais nada, nem por nós.</li>
           </ul>
+
+          <h3>Registros de acesso</h3>
+
+          <p><strong>Nós não guardamos registro de acesso de ninguém.</strong> Não existe nos nossos bancos data, hora, endereço IP ou identificação de aparelho de quem entra — não é que apaguemos depois: não há onde guardar. Isso vale para todo mundo, com ou sem Guardião.</p>
+
+          <p><strong>A infraestrutura que hospeda o nosso servidor, essa registra.</strong> Como acontece em qualquer serviço de hospedagem, cada requisição deixa lá dados técnicos da conexão — endereço IP, cidade, região, fuso horário, país e qual programa fez a chamada. Esses registros ficam com o provedor, por um período curto que ele define, e <strong>nós não os usamos para nada</strong>: não os lemos, não os cruzamos com a sua assinatura e não os trazemos para os nossos bancos.</p>
         </section>
 
         <section class="doc-section" id="direitos">
@@ -441,12 +446,12 @@
 
           <ul class="doc-list">
             <li><strong>Se você usa o Aegis sem o Guardião</strong>, não existe cadastro seu conosco: você nunca nos informou e-mail, nome ou telefone. O que existe é a identidade anônima da assinatura e a impressão digital do comprovante (item 11) — nenhuma das duas contém dado pessoal, dado de pagamento ou o seu nome. Fora isso, não há dados nossos sobre você para mostrar, corrigir ou apagar.</li>
-            <li><strong>Se você usa o Guardião</strong>, os direitos se aplicam à sua conta: você pode confirmar o que existe, acessar, corrigir, pedir a exclusão e revogar o consentimento do recurso a qualquer momento. O encerramento da conta apaga os dados em até 60 dias (item 11) — menos os registros de acesso, que a lei manda guardar por 6 meses.</li>
+            <li><strong>Se você usa o Guardião</strong>, os direitos se aplicam à sua conta: você pode confirmar o que existe, acessar, corrigir, pedir a exclusão e revogar o consentimento do recurso a qualquer momento. O encerramento da conta apaga os dados em até 60 dias (item 11).</li>
           </ul>
 
-          <p><strong>Base legal:</strong> os dados da conta do Guardião, a identidade anônima da assinatura e a impressão digital do comprovante de compra são tratados porque são necessários para prestar o serviço que você pediu — a execução do contrato (art. 7º, V, da LGPD) —, e o recurso Guardião em si é opcional e depende do seu consentimento (art. 7º, I). Os registros de acesso à conta são tratados para <strong>cumprir uma obrigação legal</strong> (art. 7º, II, da LGPD, com o art. 15 do Marco Civil da Internet). Não tratamos dados pessoais para nenhuma outra finalidade.</p>
+          <p><strong>Base legal:</strong> os dados da conta do Guardião, a identidade anônima da assinatura e a impressão digital do comprovante de compra são tratados porque são necessários para prestar o serviço que você pediu — a execução do contrato (art. 7º, V, da LGPD) —, e o recurso Guardião em si é opcional e depende do seu consentimento (art. 7º, I). Os dados técnicos de conexão registrados pela infraestrutura que hospeda o servidor — inclusive o endereço IP — apoiam-se no <strong>legítimo interesse</strong> (art. 7º, IX, da LGPD) de manter o serviço no ar e protegido contra abuso; nós não os utilizamos. Não tratamos dados pessoais para nenhuma outra finalidade.</p>
 
-          <p><strong>Prazo de retenção:</strong> os dados da conta existem enquanto a conta existir e são excluídos em até 60 dias após o encerramento. A única exceção são os registros de acesso, que a lei manda guardar por 6 meses (item 11) — por isso eles não podem ser apagados a pedido antes desse prazo.</p>
+          <p><strong>Prazo de retenção:</strong> os dados da conta existem enquanto a conta existir e são excluídos em até 60 dias após o encerramento. O mesmo prazo vale para a identidade anônima e a impressão digital do comprovante, contado a partir do fim da assinatura. Os dados técnicos de conexão registrados pela infraestrutura seguem o prazo do provedor, que é curto e não é definido por nós (item 11).</p>
 
           <p>Para qualquer pedido, dúvida ou reclamação relacionada a dados pessoais, escreva para <strong><a href="mailto:suporte@shieldlabs.app">suporte@shieldlabs.app</a></strong>. Responderemos dentro dos prazos previstos na lei.</p>
 
@@ -456,7 +461,7 @@
         <section class="doc-section" id="seguranca">
           <h2>13. Segurança</h2>
 
-          <p>O aplicativo foi construído para que a privacidade não dependa da nossa boa vontade, e sim da arquitetura: os dados de navegação nunca chegam até nós, então não existe base de navegação nossa que possa vazar, ser invadida ou ser vendida. O que existe em servidor — a identidade anônima e a impressão digital do comprovante de quem assina, a conta do Guardião de quem usa o recurso e os registros de acesso a essa conta — é o mínimo descrito nos itens 8, 9 e 11, e trafega apenas por conexões criptografadas. Os registros de acesso são guardados sob sigilo, como a própria lei que os exige determina.</p>
+          <p>O aplicativo foi construído para que a privacidade não dependa da nossa boa vontade, e sim da arquitetura: os dados de navegação nunca chegam até nós, então não existe base de navegação nossa que possa vazar, ser invadida ou ser vendida. O que existe em servidor — a identidade anônima e a impressão digital do comprovante de quem assina, e a conta do Guardião de quem usa o recurso — é o mínimo descrito nos itens 8, 9 e 11, e trafega apenas por conexões criptografadas.</p>
 
           <p>Sobre as listas que o aplicativo baixa, as duas origens têm proteções <strong>diferentes</strong>, e preferimos dizer isso a chamar as duas de "verificada por assinatura":</p>
 
