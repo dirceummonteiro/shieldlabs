@@ -336,7 +336,7 @@
         <section class="doc-section" id="permissoes">
           <h2>7. Permissões que o aplicativo solicita</h2>
 
-          <p>O aplicativo declara <strong>nove permissões</strong>, listadas abaixo. Algumas ele pede diretamente; outras vêm junto com bibliotecas oficiais do Google e do Android que ele usa — está indicado em cada linha. A autorização de VPN aparece na tabela por transparência, mas, como a própria linha explica, ela não é uma permissão declarada: é uma autorização que você concede.</p>
+          <p>O aplicativo declara <strong>doze permissões</strong>, listadas abaixo. Algumas ele pede diretamente; outras vêm junto com bibliotecas oficiais do Google e do Android que ele usa — está indicado em cada linha. A autorização de VPN aparece na tabela por transparência, mas, como a própria linha explica, ela não é uma permissão declarada: é uma autorização que você concede.</p>
 
           <div class="table-wrap" tabindex="0" role="region" aria-label="Permissões solicitadas pelo aplicativo">
             <table class="doc-table">
@@ -378,6 +378,14 @@
                 <tr>
                   <td><strong>Manter o aparelho acordado</strong> (<code>WAKE_LOCK</code>)</td>
                   <td>Vem junto com bibliotecas oficiais do Android e do Google que o aplicativo usa, como a de tarefas em segundo plano e a de notificações.</td>
+                </tr>
+                <tr>
+                  <td><strong>Restaurar a tarefa do Guardião após reiniciar</strong> (<code>RECEIVE_BOOT_COMPLETED</code>)</td>
+                  <td>Vem junto com a biblioteca oficial de tarefas em segundo plano. Se este aparelho estiver no lado protegido de um vínculo ativo, ela permite restaurar o agendamento do aviso periódico de presença depois de reiniciar ou acertar o relógio. <strong>Não inicia a VPN nem ativa a proteção sozinha.</strong></td>
+                </tr>
+                <tr>
+                  <td><strong>Compatibilidade biométrica do login Google</strong> (<code>USE_BIOMETRIC</code>, <code>USE_FINGERPRINT</code>)</td>
+                  <td>Vêm junto com as bibliotecas oficiais de credenciais do Android usadas para abrir o login do Google. O Aegis <strong>não lê, recebe nem armazena</strong> impressão digital, rosto ou qualquer dado biométrico; quando o aparelho pede biometria, a verificação acontece inteiramente no sistema.</td>
                 </tr>
                 <tr>
                   <td><strong>Permissão interna do próprio app</strong> (<code>…DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</code>)</td>
