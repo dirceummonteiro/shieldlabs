@@ -167,7 +167,7 @@
             <li>Identificadores do aparelho para fins de rastreamento</li>
           </ul>
 
-          <p><strong>Nós não integramos</strong> nenhuma ferramenta de análise de uso (analytics), telemetria, rastreador ou kit de publicidade. Sendo exatos, porque a diferença importa: a biblioteca de pagamentos do Google Play, que o aplicativo usa para as assinaturas, traz junto componentes do próprio Google — inclusive um de envio de eventos dele. Não somos nós que os usamos, nada deles chega até a Shield Labs, e o que o Google faz com eles segue a política do Google.</p>
+          <p><strong>O aplicativo não tem nenhuma ferramenta de análise de uso (analytics), de medição ou de captura de erro</strong> — nem rastreador, nem kit de publicidade. Conferimos isso no aplicativo <strong>já montado para publicação</strong>, e não apenas na lista de bibliotecas que ele usa: também não entrou nenhuma de carona, junto com outra biblioteca, que é como esse tipo de componente costuma aparecer sem ninguém decidir por ele.</p>
 
           <p>A lista acima descreve o uso do Aegis para se proteger — nos planos Básico e Premium você não se cadastra e não nos dá dado pessoal nenhum. Três exceções pontuais, explicadas nos itens 5, 6, 8, 9 e 11: ao validar uma assinatura, o nosso servidor recebe o comprovante de compra e cria a identidade anônima que o item 8 descreve; se você usa o recurso Guardião, ele passa a ver também o e-mail da conta e os metadados do vínculo; e, em qualquer conexão a esse servidor, o endereço IP e os dados técnicos derivados dele (cidade, região, fuso horário e país) ficam registrados pela infraestrutura que o hospeda, como em qualquer serviço na internet — nós não guardamos esses registros nem os usamos (item 11). Localização por GPS, mensagens e histórico de navegação não são coletados em caso nenhum. O item 5 explica, com detalhe, quais conexões o aplicativo faz e o que cada serviço enxerga.</p>
         </section>
@@ -300,6 +300,20 @@
 
           <p>Sem o recurso Guardião, os terceiros envolvidos no seu uso são o <strong>Cloudflare</strong> (nos dois papéis acima), o <strong>Google Play</strong>, o <strong>Supabase</strong> (que hospeda o nosso servidor, na validação da assinatura) e — nos planos de cobertura ampla — o <strong>GitHub</strong>. O serviço de notificações do Google só entra com o Guardião. Não usamos serviços de publicidade, de análise de comportamento ou de rastreamento.</p>
 
+          <h3>Onde os dados ficam, e o que sai do Brasil</h3>
+
+          <p><strong>Os seus dados pessoais ficam no Brasil.</strong> O banco de dados de produção — onde ficam a conta do Guardião e a identidade anônima da assinatura — está hospedado na região de São Paulo.</p>
+
+          <p>Três coisas saem do país, e nenhuma delas leva dado pessoal seu:</p>
+
+          <ul class="doc-list">
+            <li><strong>Os arquivos das listas de bloqueio</strong>, hospedados nos Estados Unidos e também baixados de repositórios públicos internacionais. São arquivos públicos, iguais para todo mundo, <strong>sem nada de ninguém dentro</strong>. Da conexão, a hospedagem registra o de sempre: o endereço de onde ela partiu e o horário.</li>
+            <li><strong>Os avisos do Guardião</strong>, entregues pelo serviço de notificação do Google. Ele recebe o código de registro do aparelho, o endereço e o horário de cada aviso — <strong>nunca o conteúdo</strong>, porque o aviso não carrega conteúdo, como está descrito logo abaixo.</li>
+            <li><strong>O pagamento</strong>, processado inteiramente pela Google Play.</li>
+          </ul>
+
+          <p>Há ainda a consulta dos nomes dos sites ao resolvedor público de DNS, descrita no item 5.2 — a única conexão que carrega nomes de sites. Ela é atendida pelo ponto de rede mais próximo de você. <strong>Não afirmamos que ela fica no Brasil</strong>, porque isso não depende de nós e não medimos: o que podemos dizer é que a consulta vai para um resolvedor público, não passa por servidor nosso e não é associada a conta nenhuma.</p>
+
           <h3>Google (Firebase Cloud Messaging) — só se você usar o Guardião</h3>
 
           <p>Para avisar o Guardião de que existe um pedido esperando, precisamos de um "toque no ombro" que chegue mesmo com o app fechado. No Android, quem faz isso é o serviço de notificações do Google. Não há alternativa que funcione com o aparelho parado, e a alternativa que não usa o Google chegaria horas depois — o que, para quem está esperando uma aprovação, é o mesmo que não chegar.</p>
@@ -308,13 +322,15 @@
 
           <p><strong>O que o Google fica sabendo — e isto é o ponto que não queremos minimizar.</strong> Ainda que a mensagem não tenha conteúdo, o Google necessariamente registra: um identificador do aplicativo instalado neste aparelho, o endereço IP, e <strong>o horário de cada aviso enviado</strong>. Como o Aegis só envia aviso quando algo acontece no vínculo de Guardião, esse registro de horários é, na prática, <strong>um rastro de quando houve atividade</strong> no seu vínculo — num aplicativo cujo propósito é proteção contra apostas. O conteúdo não vaza; o <em>momento</em> sim. Para reduzir isso, <strong>o envio é feito com atraso e agrupamento deliberados</strong>: cada aviso sai entre um e quatro minutos depois do que o motivou, com o intervalo variando a cada vez, e vários eventos seguidos viram um aviso só. O horário que o Google registra, portanto, não é o horário do que aconteceu no seu vínculo.</p>
 
-          <p><strong>Quando isto se aplica a você:</strong> só se você criar uma conta <strong>e</strong> um vínculo de Guardião ativo. Sem vínculo ativo, o Aegis não inicializa esse serviço e não registra identificador nenhum. Ao encerrar o vínculo, o registro é revogado no nosso servidor e o código de registro é apagado do aparelho. Sendo exatos: <strong>um identificador da instalação do aplicativo continua existindo</strong>, no aparelho e no Google, enquanto o aplicativo estiver instalado — ele é criado pela própria biblioteca do Google e não é nosso para apagar.</p>
+          <p><strong>Quando isto se aplica a você:</strong> só se você criar uma conta <strong>e</strong> um vínculo de Guardião ativo. Sem vínculo ativo, o Aegis não inicializa esse serviço e não registra identificador nenhum. Ao encerrar o vínculo, <strong>o código de notificação do aparelho é apagado no mesmo momento em que o vínculo termina</strong> — não fica guardado marcado como inativo —, e a linha do registro é <strong>excluída em até 30 dias</strong>. Sendo exatos: <strong>um identificador da instalação do aplicativo continua existindo</strong>, no aparelho e no Google, enquanto o aplicativo estiver instalado — ele é criado pela própria biblioteca do Google e não é nosso para apagar.</p>
 
           <p><strong>O que não fazemos:</strong> não usamos Firebase Analytics, Crashlytics, nem qualquer SDK de análise ou telemetria. O único componente do Google no app, além da biblioteca de pagamentos da Play Store, é o de notificações descrito aqui.</p>
 
           <h3>Relatórios de falha</h3>
 
-          <p>Se você tiver ativado, nas configurações do Android, o envio de dados de diagnóstico ao Google, o Google pode nos disponibilizar relatórios técnicos de travamentos do aplicativo. Esses relatórios são gerados e controlados pelo Android, contêm informações técnicas sobre o erro (como a versão do sistema e o ponto do código em que a falha ocorreu) e <strong>não contêm sites, domínios ou histórico de navegação</strong>. Você pode desativar esse envio nas configurações do próprio Android.</p>
+          <p><strong>O aplicativo não envia relatórios de falha para lugar nenhum.</strong> Nós verificamos isso no aplicativo já montado para publicação, e não apenas na lista de bibliotecas: não há nele nenhuma ferramenta de análise de uso, de medição ou de captura de erro — incluindo as que costumam entrar de carona junto com outras bibliotecas.</p>
+
+          <p>O que existe é o painel da loja: como qualquer desenvolvedor, vemos ali os travamentos que o próprio Android reporta ao Google, se você tiver ativado o envio de dados de diagnóstico nas configurações do aparelho. <strong>Isso não vem do nosso aplicativo</strong> — é do sistema para a loja —, contém informações técnicas sobre o erro e <strong>não contém sites, domínios ou histórico de navegação</strong>. Você pode desativar esse envio nas configurações do próprio Android.</p>
         </section>
 
         <section class="doc-section" id="permissoes">
