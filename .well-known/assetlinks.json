@@ -5,7 +5,8 @@
       "namespace": "android_app",
       "package_name": "com.shieldlabs.aegis",
       "sha256_cert_fingerprints": [
-        "38:99:CB:ED:FD:13:82:97:32:56:30:31:93:23:10:43:0C:B4:C7:3E:F2:45:AD:AD:20:A1:38:E8:49:4A:50:A2"
+        "38:99:CB:ED:FD:13:82:97:32:56:30:31:93:23:10:43:0C:B4:C7:3E:F2:45:AD:AD:20:A1:38:E8:49:4A:50:A2",
+        "43:7F:59:8F:AA:08:28:DF:34:E1:B7:C7:15:9A:53:D1:8E:29:E7:71:24:C5:A9:E4:3D:05:9A:BB:71:82:12:BB"
       ]
     }
   }
