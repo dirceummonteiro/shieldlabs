@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.shieldlabs.aegis",
+      "sha256_cert_fingerprints": [
+        "38:99:CB:ED:FD:13:82:97:32:56:30:31:93:23:10:43:0C:B4:C7:3E:F2:45:AD:AD:20:A1:38:E8:49:4A:50:A2"
+      ]
+    }
+  }
+]
