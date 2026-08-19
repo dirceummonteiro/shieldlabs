@@ -74,8 +74,6 @@
     border: 1px solid rgba(128,140,160,.4); background: transparent; color: inherit;
     cursor: pointer; margin-top: .5rem;
   }
-  /* Enquanto o app não está na loja, o botão é um rótulo de estado — não um link. */
-  .btn[aria-disabled="true"] { cursor: default; opacity: .85; font-weight: 600; }
   ol { padding-left: 1.2rem; }
   li { margin-bottom: .4rem; }
   [hidden] { display: none !important; }
@@ -100,8 +98,8 @@
 </p>
 
 <p class="muted">
-  Esta página aparece quando o Aegis ainda não está instalado neste aparelho. Com o app
-  instalado, tocar no convite passa a abri-lo direto.
+  Esta página aparece quando o Aegis não está instalado neste aparelho. Com o app instalado,
+  tocar no convite abre o Aegis direto, sem passar por aqui.
 </p>
 
 <noscript>
@@ -119,11 +117,11 @@
 <div class="card">
   <strong>Como aceitar</strong>
   <ol>
-    <li>Instale o Aegis assim que ele estiver na Google Play.</li>
-    <li>Abra o app e toque em <em>Fui convidado para ser Guardião de alguém</em>.</li>
+    <li>Instale o Aegis pela Google Play.</li>
+    <li>Abra o app, vá em <em>Guardião</em> e toque em <em>Recebi um convite</em>.</li>
     <li>Cole o código abaixo.</li>
   </ol>
-  <span class="btn" aria-disabled="true">Em breve na Google Play</span>
+  <a class="btn" href="https://play.google.com/store/apps/details?id=com.shieldlabs.aegis">Baixar na Google Play</a>
   <p class="muted" style="margin:.8rem 0 0">
     Ser guardião exige uma conta no app, criada pelo login com o Google. É ela que liga os dois aparelhos.
     Se o código não for aceito quando você tentar, peça um convite novo para a pessoa que

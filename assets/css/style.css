@@ -776,9 +776,11 @@ strong { font-weight: 600; color: var(--silver); }
   border: 1px solid var(--steel-dim);
   border-radius: 12px;
   color: var(--steel);
-  opacity: .75;
-  cursor: default;
+  text-decoration: none;
+  transition: border-color .15s ease;
 }
+
+.store-badge:hover { border-color: var(--steel); }
 
 .store-badge-sub { font-size: .6875rem; letter-spacing: .12em; text-transform: uppercase; }
 .store-badge-name { font-size: 1.125rem; font-weight: 600; color: var(--silver); line-height: 1.2; }
